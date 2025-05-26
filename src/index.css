@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "../src/styles/theme.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Roboto", sans-serif;
+}
+
+.custom-curve::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  background: white; /* match your background */
+  transform: rotate(90deg);
+  border-radius: 50%;
+  z-index: 10;
+}

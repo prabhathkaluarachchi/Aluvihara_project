@@ -1,0 +1,10 @@
+@theme{
+    --color-primary: #EBB23E;
+    --color-secondary: #181415;
+    --color-ternary: #707070;
+
+    --text-header: 96px;
+    --text-subheader: 32px;
+    --text-para: 24px;
+    --text-navlink: 18px;
+}
