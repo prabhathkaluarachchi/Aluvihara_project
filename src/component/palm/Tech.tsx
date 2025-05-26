@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Flower from "../../assets/linearts/flowerLineArt.png";
-import { Play } from "lucide-react";
+import { Pause, Play } from "lucide-react";
 const PalmLeafSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -13,7 +13,10 @@ const PalmLeafSection: React.FC = () => {
   };
 
   const handlePause = () => {
-    setIsPlaying(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    }
   };
 
   return (
@@ -39,10 +42,9 @@ const PalmLeafSection: React.FC = () => {
               {/* Custom Overlay Play Button */}
               {!isPlaying && (
                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center z-10 text-white space-y-4">
-                  <h1 className="text-4xl font-serif">Art of Palm Leaves</h1>
                   <button
                     onClick={handlePlay}
-                    className="flex items-center bg-white p-4 text-black rounded-full text-lg font-semibold shadow-lg text-primary hover:text-[#4B4B4B] bg-gray-200 hover:bg-primary transition duration-300"
+                    className="flex items-center bg-white p-4 text-black rounded-full text-lg font-semibold shadow-lg text-primary hover:text-[#4B4B4B] bg-gray-200 hover:bg-primary transition duration-300 cursor-pointer"
                   >
                     <Play strokeWidth={3} />
                   </button>
@@ -55,7 +57,7 @@ const PalmLeafSection: React.FC = () => {
                 ref={videoRef}
                 controls
                 onPause={handlePause}
-                className="h-full w-full rounded-lg z-0"
+                className="h-full w-full rounded-md z-0"
               >
                 <source
                   src="https://videos.pexels.com/video-files/5592655/5592655-sd_640_360_30fps.mp4"

@@ -182,7 +182,7 @@ const Process = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [visibleCount, setVisibleCount] = useState(4);
 
-  const toggleStep = (index:number) => {
+  const toggleStep = (index: number) => {
     setActiveStep((prev) => (prev === index ? -1 : index));
   };
 
@@ -207,7 +207,7 @@ const Process = () => {
             </div>
             <div className="items-center text-end">
               <h2 className="lg:mb-20 lg:mt-[-80px] text-2xl md:text-4xl font-semibold lg:right-[0] text-black mb-12 relative z-10">
-                <span className="text-yellow-500 block text-3xl font-medium">
+                <span className="text-primary block text-3xl font-medium">
                   Steps of
                 </span>
                 <span className="text-[72px] lg:text-[96px]">Process</span>
@@ -216,30 +216,34 @@ const Process = () => {
             {steps.slice(0, visibleCount).map((step, index) => (
               <div key={index} className="mb-10 lg:mb-0 lg:ml-10 lg:mt-15">
                 <div
-                  className="flex  gap-4 cursor-pointer"
+                  className={`flex gap-2 cursor-pointer items-center ${
+                    activeStep === index ? "items-start" : "text-gray-400"
+                  }`}
                   onClick={() => toggleStep(index)}
                 >
                   <div
-                    className={`w-10 h-10  bg-[#F7F6F6] z-100 rounded-full flex items-center justify-center font-bold border-2 ${activeStep === index
-                        ? "border-yellow-500 text-yellow-500 bg-white"
+                    className={`w-10 h-10 lg:p-8 p-3 bg-[#F7F6F6] z-100 rounded-full flex items-center justify-center font-bold border-2 lg:border-4 ${
+                      activeStep === index
+                        ? "border-primary text-black bg-white"
                         : "border-gray-300 text-gray-400"
-                      }`}
+                    }`}
                   >
                     {index + 1}
                   </div>
 
                   <div
-                    className={`w-full max-w-4xl bg-[#DADADA] text-[#4B4B4B]/90 lg:left-0 rounded-2xl p-3 flex flex-col justify-between  pr-4 text-lg ${activeStep === index
+                    className={`w-full max-w-4xl bg-[#DADADA]/38 text-[#4B4B4B]/90 lg:left-0 rounded-4xl p-6 flex flex-col justify-center pr-4 text-sm lg:text-lg ${
+                      activeStep === index
                         ? "text-black font-semibold bg-white"
                         : "text-gray-400"
-                      }`}
+                    }`}
                   >
-                    <div className="flex justify-between ml-10  items-center">
+                    <div className="flex justify-between items-center">
                       <div className="text-xl">{step.title}</div>
                       <div>
                         {activeStep === index ? (
-                          <div className="p-2 border-2 rounded-full border-yellow-500 hidden">
-                            <FaArrowUp className="text-yellow-500" />
+                          <div className="p-2 border-2 rounded-full border-primary hidden">
+                            <FaArrowUp className="text-primary" />
                           </div>
                         ) : (
                           <div className="p-2 border-2 rounded-full">
@@ -250,7 +254,7 @@ const Process = () => {
                     </div>
                     <div>
                       {activeStep === index && (
-                        <div className="mt-4 lg:ml-10  bg-white rounded-xl   flex flex-col md:flex-row items-start justify-between gap-6 max-w-4xl relative">
+                        <div className="mt-4 bg-white rounded-xl   flex flex-col md:flex-row items-start justify-between gap-6 max-w-4xl relative">
                           <div className="flex-1">
                             <p className="text-[16px] w-full font-normal text-gray-700 whitespace-pre-line text-justify">
                               {step.description}
@@ -265,8 +269,8 @@ const Process = () => {
                               />
                             </div>
                           )}
-                          <div className=" lg:relative p-2 border-2 lg:mt-40  rounded-full border-yellow-500">
-                            <FaArrowUp className="text-yellow-500" />
+                          <div className=" lg:relative p-2 border-2 lg:mt-40  rounded-full border-primary">
+                            <FaArrowUp className="text-primary border-primary" />
                           </div>
                         </div>
                       )}
@@ -280,19 +284,19 @@ const Process = () => {
               {visibleCount < steps.length && (
                 <button
                   onClick={handleMoreSteps}
-                  className="bg-black text-yellow-400 px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition flex items-center gap-2"
+                  className="bg-black text-primary px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition flex items-center gap-2"
                 >
-                  More Steps{" "}
-                  <FaArrowDown className="border rounded-full p-1 border-yellow-400" />
+                  More Steps
+                  <FaArrowDown className="border rounded-full p-1 border-primary" />
                 </button>
               )}
 
               {visibleCount > 4 && (
                 <button
                   onClick={() => setVisibleCount(4)}
-                  className="bg-yellow-500 cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:bg-yellow-400 transition flex items-center gap-2"
+                  className="bg-primary cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:bg-primary transition flex items-center gap-2"
                 >
-                  Show Less{" "}
+                  Show Less
                   <FaArrowUp className="border rounded-full p-1 cursor-pointer border-black" />
                 </button>
               )}
