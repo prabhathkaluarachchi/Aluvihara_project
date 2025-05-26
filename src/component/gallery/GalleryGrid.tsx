@@ -21,41 +21,44 @@ const allImages = [
   { src: "/gallery/img1.png", desc: "Winding road panorama." },
   { src: "/gallery/img3.png", desc: "Dense fog in valley." },
   { src: "/gallery/img5.png", desc: "Boats docked at pier." },
-  
 ];
 
 export default function GalleryGrid() {
   const [showMore, setShowMore] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const initialImages = allImages.slice(0, 9);
   const extraImages = allImages.slice(13);
-
   const images = showMore ? [...initialImages, ...extraImages] : initialImages;
 
-  const openModal = (index:any) => setActiveIndex(index);
+  const openModal = (index: number) => setActiveIndex(index);
   const closeModal = () => setActiveIndex(null);
   const prevImage = () =>
-    setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setActiveIndex((prev) =>
+      prev === 0 ? images.length - 1 : (prev ?? 0) - 1
+    );
   const nextImage = () =>
-    setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setActiveIndex((prev) =>
+      prev === images.length - 1 ? 0 : (prev ?? 0) + 1
+    );
 
-  const getSpanClass = (index:any) =>
+  const getSpanClass = (index: number) =>
     index % 7 === 0 ? "md:col-span-2" : index % 5 === 0 ? "md:row-span-2" : "";
 
   return (
     <section className="py-10 mt-[-90px] lg:mt-[-25px] px-0 md:px-0 mx-auto w-5/6 mb-16">
-              {/* Right: Titles */}
-        <div className="z-20 flex justify-center lg:justify-end lg:px-5">
-          <div className="text-center lg:text-left">
-            <p className="text-[#EBB23E] text-[36px] md:text-[48px] font-medium leading-[1]">
-              Discover
-            </p>
-            <h2 className="text-[48px] md:text-[70px] font-bold text-black mb-6 leading-[1]">
-              Highlights
-            </h2>
-          </div>
+      {/* Titles */}
+      <div className="z-20 flex justify-center lg:justify-end lg:px-5">
+        <div className="text-center lg:text-left">
+          <p className="text-[#EBB23E] text-[36px] md:text-[48px] font-medium leading-[1]">
+            Discover
+          </p>
+          <h2 className="text-[48px] md:text-[70px] font-bold text-black mb-6 leading-[1]">
+            Highlights
+          </h2>
         </div>
+      </div>
+
       {/* DESKTOP VIEW */}
       <div className="hidden md:block lg:mt-8">
         <div className="relative">
@@ -73,7 +76,6 @@ export default function GalleryGrid() {
                   alt={`Gallery image ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* Hover description overlay */}
                 <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-sm font-medium text-center px-2">
                   {item.desc}
                 </div>
@@ -82,54 +84,68 @@ export default function GalleryGrid() {
           </div>
 
           {!showMore && (
-            <div
-              onClick={() => setShowMore(true)}
-              className="absolute inset-0 top-1/2 bg-gradient-to-t from-black/95 via-black/85 to-transparent rounded-md items-end justify-center cursor-pointer shadow-inner hidden md:flex"
-            >
-              <div className="flex flex-col items-center pb-6 ">
-                <div className="bg-black p-3 rounded-full shadow-lg mb-2">
-                  <ChevronDown className="text-white w-6 h-6" />
+            <div className="absolute bottom-0 h-72 w-full hidden md:flex items-end justify-center pointer-events-none">
+              <div
+                onClick={() => setShowMore(true)}
+                className="pointer-events-auto bg-gradient-to-t from-black via-black/50 to-transparent shadow-inner flex items-end justify-center w-[calc(100%-2rem)] md:w-[calc(100%-3rem)]"
+              >
+                <div className="flex flex-col items-center pb-6">
+                  <div className="bg-black p-3 rounded-full shadow-lg mb-2">
+                    <ChevronDown className="text-white w-6 h-6" />
+                  </div>
+                  <p className="text-yellow-500 font-medium text-sm">
+                    Show More Photos
+                  </p>
                 </div>
-                <p className="text-yellow-500 font-medium text-sm">
-                  Show More Photos
-                </p>
               </div>
             </div>
           )}
-        </div>
 
-        {showMore && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4 auto-rows-[120px] sm:auto-rows-[140px] md:grid-cols-4 md:auto-rows-[180px] md:gap-4 px-4 md:px-6">
-            {extraImages.map((item, index) => {
-              const globalIndex = initialImages.length + index;
-              return (
-                <div
-                  key={globalIndex}
-                  className={`overflow-hidden rounded-md cursor-pointer relative group ${getSpanClass(
-                    index + 9
-                  )}`}
-                  onClick={() => openModal(globalIndex)}
+          {showMore && (
+            <>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4 auto-rows-[120px] sm:auto-rows-[140px] md:grid-cols-4 md:auto-rows-[180px] md:gap-4 px-4 md:px-6">
+                {extraImages.map((item, index) => {
+                  const globalIndex = initialImages.length + index;
+                  return (
+                    <div
+                      key={globalIndex}
+                      className={`overflow-hidden rounded-md cursor-pointer relative group ${getSpanClass(
+                        index + 9
+                      )}`}
+                      onClick={() => openModal(globalIndex)}
+                    >
+                      <img
+                        src={item.src}
+                        alt={`Gallery image ${globalIndex + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-sm font-medium text-center px-2">
+                        {item.desc}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="hidden md:flex justify-center mt-6">
+                <button
+                  onClick={() => setShowMore(false)}
+                  className="flex items-center bg-black text-yellow-400 px-4 py-2 rounded-full shadow hover:bg-yellow-500 hover:text-black transition"
                 >
-                  <img
-                    src={item.src}
-                    alt={`Gallery image ${globalIndex + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-sm font-medium text-center px-2">
-                    {item.desc}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
+                  <ChevronDown className="rotate-180 mr-2" />
+                  Collapse
+                </button>
+              </div>
+            </>
+          )}
+        </div>
       </div>
 
       {/* MOBILE/TABLET VIEW */}
       <div className="block md:hidden lg:px-4">
         <div className="relative">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 auto-rows-[120px] sm:auto-rows-[140px]">
-            {images.map((item, index) => (
+            {images.slice(0, showMore ? 12 : 6).map((item, index) => (
               <div
                 key={index}
                 className="overflow-hidden rounded-md cursor-pointer relative group"
@@ -147,25 +163,28 @@ export default function GalleryGrid() {
             ))}
           </div>
 
-          {!showMore && (
-            <div
-              onClick={() => setShowMore(true)}
-              className="absolute inset-0 top-1/2 bg-gradient-to-t from-white/95 via-white/80 to-transparent rounded-md items-end justify-center cursor-pointer shadow-inner flex"
-            >
-              <div className="flex flex-col items-center pb-6">
-                <div className="bg-black p-3 rounded-full shadow-lg mb-2">
-                  <ChevronDown className="text-white w-6 h-6" />
-                </div>
-                <p className="text-yellow-500 font-medium text-sm">
-                  Show More Photos
-                </p>
+          {/* Show More or Collapse Button */}
+          <div
+            onClick={() => setShowMore(!showMore)}
+            className="mt-4 flex justify-center"
+          >
+            <button className="flex flex-col items-center">
+              <div className="bg-black p-3 rounded-full shadow-lg mb-2">
+                <ChevronDown
+                  className={`text-white w-6 h-6 transition-transform duration-300 ${
+                    showMore ? "rotate-180" : ""
+                  }`}
+                />
               </div>
-            </div>
-          )}
+              <p className="text-yellow-500 font-medium text-sm">
+                {showMore ? "Collapse" : "Show More Photos"}
+              </p>
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* MODAL */}
+      {/* MODAL VIEWER */}
       {activeIndex !== null && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
           <button
