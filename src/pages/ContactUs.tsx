@@ -80,7 +80,7 @@ const ContactPage: React.FC = () => {
                 <input type="text" name="subject" placeholder="Subject*" required />
                 <input type="email" name="user_email" placeholder="E-mail*" required />
                 <textarea name="message" placeholder="Message*" required></textarea>
-                <button type="submit">Send Your Message</button>
+                <button type="submit" className="border-2 border-primary text-secondary bg-transparent">Send Your Message</button>
               </form>
             </div>
             <div className="contact-info">

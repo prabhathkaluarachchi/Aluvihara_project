@@ -70,7 +70,7 @@ const History: React.FC = () => {
       <section className="relative min-h-[500px] md:min-h-[600px] text-white flex items-center overflow-hidden">
         <NavBar1 page="history" />
         <img
-          src="history_land_banner.jpg"
+          src="resize.png"
           alt="Aluvihara Rock Temple"
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         />
@@ -179,7 +179,7 @@ const History: React.FC = () => {
         <section
         className="w-full lg:w-2/3 flex flex-col gap-5 mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center lg:text-left text-black">
-            Timeline Of Aluvihara Temple
+            Timeline of Aluvihara Temple
           </h2>
           <p className="lg:pr-50 text-base lg:text-xl text-center lg:text-left font-semibold text-ternary/80">A Scared Monastery Where Buddhist Scripture Were Written For  Future Generation</p>
         </section>
