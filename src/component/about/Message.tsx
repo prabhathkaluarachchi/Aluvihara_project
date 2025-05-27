@@ -34,7 +34,7 @@ const Message: React.FC = () => {
       <div className="relative w-full h-[300px] mt-6 block lg:hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[#F4F6F8] rounded-md flex items-center justify-center z-10">
           <img
-            src={Puskole}
+            src="message_img.jpg"
             alt="Palm Leaf Book"
             className="rounded-md w-full h-full object-cover"
           />
@@ -60,11 +60,11 @@ const Message: React.FC = () => {
     <div className="relative hidden lg:block w-full max-w-[440px] h-[400px] mt-10 lg:mt-[100px] lg:p-20">
       <div className="absolute left-[20px] top-0 w-full h-[400px] border border-gray-300 z-0"></div>
       <div className="absolute top-[-20px] left-[-20px] w-full h-[400px] border border-gray-300 z-0"></div>
-      <div className="absolute top-0 left-0 lg:left-1 w-full h-full lg:h-[380px] rounded-md flex items-center justify-center z-10 lg:py-2 lg:px-5">
+      <div className="absolute top-0 left-0 lg:left-1 w-full lg:h-[380px] rounded-md flex items-center justify-center z-10 lg:py-2 lg:px-5">
         <img
-          src={ImgTestUser}
+          src="message_img.jpg"
           alt="Palm Leaf Book"
-          className="rounded-md w-full h-full object-cover "
+          className="rounded-md w-full "
         />
       </div>
     </div>
