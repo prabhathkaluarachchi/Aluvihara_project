@@ -145,7 +145,7 @@ export default function GalleryGrid() {
       <div className="block md:hidden lg:px-4">
         <div className="relative">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 auto-rows-[120px] sm:auto-rows-[140px]">
-            {images.slice(0, showMore ? 12 : 6).map((item, index) => (
+            {images.slice(0, showMore ? 14 : 6).map((item, index) => (
               <div
                 key={index}
                 className="overflow-hidden rounded-md cursor-pointer relative group"

@@ -8,10 +8,12 @@ import RecentPostsSidebar from "../component/blog/RecentPostsSidebar";
 import SmallPostCard from "../component/blog/SmallPostCard";
 import LoadMoreButton from "../component/blog/LoadMoreButton";
 import { BlogPostType } from "../component/blog/types";
+import BlogHero from "../component/blog/BlogHero";
 import Swal from "sweetalert2";
 import BlogPageHero from "../component/blog/BlogPageHero";
 
 const BlogPage = () => {
+  //top mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -21,11 +23,12 @@ const BlogPage = () => {
   const [visiblePosts, setVisiblePosts] = useState(4);
   const [isSearchTriggered, setIsSearchTriggered] = useState(false);
 
+  // Mock data
   const featuredPost: BlogPostType = {
     id: "1",
     title: "The Revival of Buddhism by King Walagamba",
     excerpt:
-      "In the last century BCE, King Walagamba stands as a symbol of resilience and devotion among Buddhist rulers...",
+      "In the last century BCE, King Walagamba stands as a symbol of resilience and devotion among Buddhist rulers, embodying the unwavering commitment to preserving the sacred traditions of the Dhamma. During a time of political upheaval and foreign invasions, he not only fought to reclaim his rightful throne but also took monumental steps to safeguard Buddhism for future generations. His most enduring legacy was the formal transcription of the oral Buddhist teachings — the Tripitaka — into written form, ensuring their survival against the tide of uncertainty. Through his efforts, Sri Lanka became a stronghold of Theravāda Buddhism, and his reign is remembered not merely for its political achievements, but for the spiritual foresight that continues to shape the island’s religious and cultural identity.",
     content: "Full content here...",
     author: "Sumangala Thero",
     date: "05/05/2025",
@@ -41,6 +44,7 @@ const BlogPage = () => {
       author: "John Eisenriegl",
       date: "March 2023",
     },
+    // Add at least 4 more posts to demonstrate load more functionality
     {
       id: "5",
       title: "Ancient Buddhist Manuscripts",
@@ -76,10 +80,6 @@ const BlogPage = () => {
       date: "November 2022",
     },
   ];
-
-  const filteredPosts = smallPosts.filter((post) =>
-    post.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   const handleLoadMore = () => {
     setIsLoading(true);
@@ -121,7 +121,7 @@ const BlogPage = () => {
       Swal.fire({
         title:
           window.innerWidth < 768
-            ? '<span class="text-[14px]">No matching posts found</span>'
+            ? '<span class="text-[14px] ">No matching posts found</span>'
             : "No matching posts found",
         icon: "error",
         ...swalOptions,
@@ -129,34 +129,42 @@ const BlogPage = () => {
     }
   };
 
+  const filteredPosts = smallPosts.filter((post) =>
+    post.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
-      <div className="min-h-screen flex flex-col overflow-x-hidden mx-auto">
+      <div className="min-h-screen flex flex-col overflow-x-hidden  w-full">
         <NavBar1 page="blog" />
         <BlogPageHero />
 
-        <main className="flex-grow w-full max-w-[1400px] px-4 sm:px-6 lg:px-8 mx-auto relative overflow-hidden">
-          <div className="mb-10 mt-30">
+        <main className="flex-grow relative overflow-hidden">
+          <div className="mb-10 mt-30 w-5/6 mx-auto">
             <h1 className="text-[36px] text-[#373737] mb-4 font-[500]">
               Find Valuable Blogs Here,
             </h1>
             <SearchBar
               searchQuery={searchQuery}
-              onSearchChange={handleSearch}
-              onSearchSubmit={handleSearchButtonClick}
+              onSearchChange={(query: any) => {
+                handleSearch(query); // live search update
+              }}
+              onSearchSubmit={handleSearchButtonClick} // triggers SweetAlert
             />
           </div>
 
-          {/* Search Results */}
+          {/* Show search results live while typing */}
           {searchQuery ? (
-            <div className="mt-4">
+            <div className="mt-4 w-5/6 mx-auto">
               <h2 className="text-xl font-semibold text-gray-700 mb-4">
                 Search Results:
               </h2>
               {filteredPosts.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                   {filteredPosts.map((post) => (
-                    <SmallPostCard key={post.id} post={post} />
+                    <div key={post.id} className="h-full">
+                      <SmallPostCard post={post} />
+                    </div>
                   ))}
                 </div>
               ) : (
@@ -166,7 +174,7 @@ const BlogPage = () => {
           ) : (
             <>
               {/* Featured and Sidebar */}
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col lg:flex-row gap-8 w-5/6 mx-auto">
                 <div className="lg:w-2/3">
                   <BlogPost post={featuredPost} />
                 </div>
@@ -176,26 +184,10 @@ const BlogPage = () => {
               </div>
 
               {/* More Articles Section */}
-              <section className="relative overflow-hidden" id="more-articles">
-                {/* Background image */}
-                <div
-                  className="absolute top-0 right-0 h-full hidden sm:block pointer-events-none"
-                  style={{ transform: "translateX(0%) scale(1)" }}
-                >
-                  <img
-                    src="/img/test.png"
-                    alt="Buddhist Art"
-                    className="h-full object-contain opacity-10"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = "test.png";
-                    }}
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="relative z-10">
+              <section className="mt-16 relative w-full">
+                <div className="relative z-10 w-5/6 mx-auto">
                   <div className="flex flex-col md:flex-row">
-                    <div className="md:w-2/3 bg-transparent rounded-lg p-4">
+                    <div className="md:w-2/3 bg-transparent bg-opacity-90 rounded-lg p-4">
                       <h2 className="text-2xl font-bold text-gray-800 mb-6">
                         More Articles
                       </h2>
@@ -214,18 +206,33 @@ const BlogPage = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Buddhist Art Image - right aligned, smaller, scrolls with content */}
+                <div className="absolute top-0 right-0 w-[600px] hidden sm:block pointer-events-none">
+                  <img
+                    src="/img/test.png"
+                    alt="Buddhist Art"
+                    className="w-full h-auto object-contain opacity-10"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = "test.png";
+                    }}
+                  />
+                </div>
               </section>
             </>
           )}
         </main>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-[#222222] py-10 mt-30">
-        <Footer />
-      </footer>
-      <div className="bg-[#1E1E1E] text-center py-3 text-[8px] md:text-xs text-ternary">
-        <p>All rights reserved | Powered by All In One Holdings</p>
+      {/* footer section */}
+      <div className="mt-30">
+        <footer className="bg-[#222222] py-10">
+          <Footer />
+        </footer>
+        {/* copyrights */}
+        <div className="bg-[#1E1E1E] text-center py-3 text-[8px] md:text-xs text-ternary">
+          <p>All rights reserved | Powered by All In One Holdings</p>
+        </div>
       </div>
     </>
   );
