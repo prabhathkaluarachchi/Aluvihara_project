@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
 
                     <p 
                     className="text-ternary text-sm text-justify lg:text-left lg:text-lg">
-                        Visitors are all welcome!. Discover the serenity and history of Aluvihara – a spiritual journey through ancient Buddhist heritage. Experience culture, tranquility, and timeless wisdom. Visit today
+                        Visitors are all Welcome!. Discover the serenity and history of Aluvihara – a spiritual journey through ancient Buddhist heritage. Experience culture, tranquility, and timeless wisdom. Visit today
                     </p>
                 </section>
                 
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
                 <section 
                 className="w-full flex flex-col gap-2">
                     <h2 
-                    className="text-ternary text-base">Fllow</h2>
+                    className="text-ternary text-base">Follow</h2>
                     <div 
                     className="flex gap-5">
                         <FaFacebookSquare className="w-8 h-8 text-white"/>

@@ -158,13 +158,16 @@ body {
 }
 
 .contact-form button {
-  background: #EBB23E;
-  border: none;
+  border: 2px solid #EBB23E;
   padding: 12px;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 6px;
+}
+
+.contact-form button:hover{
+  background: #EBB23E;
 }
 
 /* Contact Info Section */

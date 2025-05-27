@@ -103,7 +103,7 @@ export const blogPosts: BlogPostType[] = [
           "He fostered an environment where Buddhist monks could study, meditate, and teach the Dharma with renewed vigor. By supporting monastic communities and establishing infrastructure for their growth, the king ensured that Buddhism not only survived but thrived in Sri Lanka. His reign symbolizes resilience and devotion, laying the foundation for the preservation and enrichment of Buddhist culture for centuries to come.",
       },
     ],
-    image: "/img/temple2.jpg",
+    image: "/img/temple.jpg",
     author: "Sumangala Thero",
     date: "20 March 2025",
     image2: "/img/king1.jpg",

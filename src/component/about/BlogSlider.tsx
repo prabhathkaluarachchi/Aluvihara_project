@@ -117,7 +117,7 @@ const BlogSlider: React.FC = () => {
       className="hidden lg:block w-5/6 h-full mx-auto py-5 relative overflow-hidden">
         <div className="flex gap-4 h-full items-start justify-between py-5">
           {/* Active card */}
-          <div className="relative h-full w-1/3 rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl shadow-xl overflow-hidden transition-all duration-500">
+          <div className="relative h-full w-1/3 rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl shadow-xl overflow-hidden transition-all duration-[1200ms] ease-in-out">
             <img
               src={activeSlide.image}
               alt={activeSlide.title}
@@ -128,7 +128,7 @@ const BlogSlider: React.FC = () => {
               <p className="text-gray-200 text-base text-justify">{activeSlide.description}</p>
               <Link to="/blog">
                  <button
-                  className="text-primary mt-3 mb-2 underline text-right w-full">Show more</button>
+                  className="text-primary mt-3 mb-2 underline text-right w-full hover:cursor-pointer">Show more</button>
               </Link>
             </div>
           </div>
@@ -138,7 +138,7 @@ const BlogSlider: React.FC = () => {
             {smallSlides.map((slide) => (
               <div
                 key={slide.id}
-                className="w-1/3 transition-transform duration-1000 transform translate-x-0 bg-white rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl overflow-hidden"
+                className="w-1/3 transition-transform duration-[3000ms] ease-in-out transform translate-x-0 bg-white rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl overflow-hidden"
               >
                 <img
                   src={slide.image}
@@ -197,7 +197,7 @@ const BlogSlider: React.FC = () => {
                 <p 
                 className="text-sm lg:text-sm text-gray-400 text-justify">{slide.description}</p>
 
-                <Link to="">
+                <Link to="/blog">
                  <button
                   className="text-primary mt-3 mb-10 underline text-right w-full">Show more</button>
                 </Link>

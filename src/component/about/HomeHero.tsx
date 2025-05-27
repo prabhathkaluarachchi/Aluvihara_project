@@ -47,7 +47,7 @@ const HomeHero: React.FC = () => {
       video: "https://videos.pexels.com/video-files/5416356/5416356-uhd_2732_1440_25fps.mp4",
       title1: "History",
       titleSub: "of",
-      title2: "AluviharaTemple",
+      title2: "Aluvihara  Temple",
       description: 'The Pali Canon, known as the "Tipitaka," is the foundational scripture of Theravāda Buddhism, containing the teachings of the Buddha.containing the teachings of the Buddha.',
       link: "/history",
     },
