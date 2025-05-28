@@ -50,7 +50,7 @@ const App: React.FC = () => {
         </section>
 
         {/* palm leaves section */}
-        <section className="relative flex flex-col w-full mx-auto py-2 h-auto lg:h-[90dvh] mt-15 flex bg-[url('process-banner.svg')] bg-fit bg-no-repeat bg-cover items-center justify-center px-5 lg:px-10 py-10 lg:py-2 md:mt-30 ">
+        <section className="relative flex flex-col w-full mx-auto py-2 h-auto lg:h-[90dvh] mt-15 flex bg-[url('/process-banner.svg')] bg-fit bg-no-repeat bg-cover items-center justify-center px-5 lg:px-10 py-10 lg:py-2 md:mt-30 ">
 
           <div className="bg-black/70 rounded-xl w-full mx-auto h-11/12 py-2 px-2 lg:py-0">
             <PalmLeavesProcess />
