@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SearchBar from "../component/blog/SearchBar"
+import SearchBar from "../component/blog/SearchBar";
 import NavBar1 from "../component/common/NavBar1";
 import Footer from "../component/common/Footer";
 
@@ -135,35 +135,18 @@ const BlogPage = () => {
 
   return (
     <>
-      <div
-        className="fixed bottom-[-0.2] right-0 w-5/12 max-w-3xl z-[-1] hidden sm:block pointer-events-none"
-        style={{
-          transform: "translateX(0%) scale(1)",
-        }}
-      >
-        <img
-          src="/img/test.png"
-          alt="Buddhist Art"
-          className="w-full h-auto object-contain opacity-10"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = "test.png";
-          }}
-        />
-      </div>
-
-      <div className="min-h-screen flex flex-col overflow-x-hidden mx-auto">
+      <div className="min-h-screen flex flex-col overflow-x-hidden  w-full">
         <NavBar1 page="blog" />
-        <BlogPageHero   />
+        <BlogPageHero />
 
-        <main className="flex-grow w-full max-w-[1400px] px-4 sm:px-6 lg:px-8 mx-auto relative overflow-hidden">
-
-          <div className="mb-10 mt-20">
+        <main className="flex-grow relative overflow-hidden">
+          <div className="mb-10 mt-30 w-5/6 mx-auto">
             <h1 className="text-[36px] text-[#373737] mb-4 font-[500]">
               Find Valuable Blogs Here,
             </h1>
             <SearchBar
               searchQuery={searchQuery}
-              onSearchChange={(query:any) => {
+              onSearchChange={(query: any) => {
                 handleSearch(query); // live search update
               }}
               onSearchSubmit={handleSearchButtonClick} // triggers SweetAlert
@@ -172,7 +155,7 @@ const BlogPage = () => {
 
           {/* Show search results live while typing */}
           {searchQuery ? (
-            <div className="mt-4">
+            <div className="mt-4 w-5/6 mx-auto">
               <h2 className="text-xl font-semibold text-gray-700 mb-4">
                 Search Results:
               </h2>
@@ -191,7 +174,7 @@ const BlogPage = () => {
           ) : (
             <>
               {/* Featured and Sidebar */}
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col lg:flex-row gap-8 w-5/6 mx-auto">
                 <div className="lg:w-2/3">
                   <BlogPost post={featuredPost} />
                 </div>
@@ -201,8 +184,8 @@ const BlogPage = () => {
               </div>
 
               {/* More Articles Section */}
-              <section className="mt-16 relative">
-                <div className="relative z-10">
+              <section className="mt-16 relative w-full">
+                <div className="relative z-10 w-5/6 mx-auto">
                   <div className="flex flex-col md:flex-row">
                     <div className="md:w-2/3 bg-transparent bg-opacity-90 rounded-lg p-4">
                       <h2 className="text-2xl font-bold text-gray-800 mb-6">
@@ -223,12 +206,23 @@ const BlogPage = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Buddhist Art Image - right aligned, smaller, scrolls with content */}
+                <div className="absolute top-0 right-0 w-[600px] hidden sm:block pointer-events-none">
+                  <img
+                    src="/img/test.png"
+                    alt="Buddhist Art"
+                    className="w-full h-auto object-contain opacity-10"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = "test.png";
+                    }}
+                  />
+                </div>
               </section>
             </>
           )}
         </main>
       </div>
-
 
       {/* footer section */}
       <div className="mt-30">
@@ -236,8 +230,7 @@ const BlogPage = () => {
           <Footer />
         </footer>
         {/* copyrights */}
-        <div
-          className="bg-[#1E1E1E] text-center py-3 text-[8px] md:text-xs text-ternary">
+        <div className="bg-[#1E1E1E] text-center py-3 text-[8px] md:text-xs text-ternary">
           <p>All rights reserved | Powered by All In One Holdings</p>
         </div>
       </div>
