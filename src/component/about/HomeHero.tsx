@@ -94,7 +94,7 @@ const HomeHero: React.FC = () => {
         {/* desktop mapp */}
         <button
           onClick={handleMapOpen}
-          className="group hidden lg:block absolute top-118 bottom-0 right-0 z-50 w-100 h-70  rounded-tr-2xl rounded-tl-3xl shadow-md hover:bg-black/0.2"
+          className="group hidden lg:block absolute  -bottom-[5px] right-0 z-50 w-100 h-70  rounded-tr-2xl rounded-tl-3xl shadow-md hover:bg-black/0.2"
         >
           <img src="Map.PNG" alt="" className="w-full h-full group-hover:cursor-pointer "/>
         </button>
