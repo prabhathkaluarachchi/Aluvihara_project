@@ -192,7 +192,9 @@ const Process = () => {
 
   let lineHeight = "240px";
 
-  if (visibleCount === 20) {
+  if (visibleCount > 20) {
+    lineHeight = "4450px";
+  } else if (visibleCount === 20) {
     lineHeight = "3270px";
   } else if (visibleCount === 12) {
     lineHeight = "2120px";
