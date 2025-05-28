@@ -4,6 +4,7 @@ import { Pause, Play } from "lucide-react";
 const PalmLeafSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -20,31 +21,37 @@ const PalmLeafSection: React.FC = () => {
   };
 
   return (
-    <section className="relative py-15 overflow-hidden lg:mt-15">
+    <section className="relative pt-20 lg:pt-30 pb-20 lg:pb-60 overflow-hidden">
       <img
         src={Flower}
         alt="Decorative Flower"
-        className="absolute top-0 right-0 w-64 pointer-events-none z-0"
+        className="absolute top-4 right-0 w-48 md:w-60 lg:w-82 pointer-events-none z-0"
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-16 px-6">
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-16 px-6 lg:px-0 lg:pl-6 lg:mr-20">
         <div className="flex-1 relative z-20">
-          <h2 className="text-yellow-600 text-3xl font-bold mb-2">Ola(Palm)</h2>
-          <h1 className="text-black lg:text-[96px] text-[64px] font-semibold mb-6">
-            Technology
-          </h1>
+          <h2 className="text-2xl md:text-4xl font-semibold text-secondary mb-5">
+            <span className="text-primary block text-3xl font-medium">
+              Ola(Palm)
+            </span>
+            <span className="text-[72px] lg:text-[96px]">Technology</span>
+          </h2>
 
           <div className="absolute lg:top-[-30px] left-[-70px] w-[570px] h-[320px] border-4 border-[#DADADA]/40 z-[-40] hidden lg:block" />
-          <div className="absolute bottom-[-50px] right-[110px] w-[620px] h-[500px] border-4 border-[#DADADA]/40 z-[-200] hidden lg:block" />
+          <div className="absolute bottom-[-120px] right-[95px] w-[782px] h-[600px] border-4 border-[#DADADA]/40 z-[-200] hidden lg:block" />
 
           <div className="flex flex-col lg:flex-row gap-8">
-            <div className="relative w-full lg:w-3/5 rounded-xl bg-amber-300 overflow-hidden shadow-lg z-50">
-              {/* Custom Overlay Play Button */}
+            <div
+              className="relative w-full lg:w-3/5 rounded-xl bg-amber-300 overflow-hidden shadow-lg z-50"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              {/* Play & Pause Buttons */}
               {!isPlaying && (
                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center z-10 text-white space-y-4">
                   <button
                     onClick={handlePlay}
-                    className="flex items-center bg-white p-4 text-black rounded-full text-lg font-semibold shadow-lg text-primary hover:text-[#4B4B4B] bg-gray-200 hover:bg-primary transition duration-300 cursor-pointer"
+                    className="flex items-center bg-white p-4 text-secondary rounded-full text-lg font-semibold shadow-lg text-primary hover:text-secondary bg-gray-200 hover:bg-primary transition duration-300 cursor-pointer"
                   >
                     <Play strokeWidth={3} />
                   </button>
@@ -52,11 +59,24 @@ const PalmLeafSection: React.FC = () => {
                 </div>
               )}
 
+              {isPlaying && isHovered && (
+                <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center z-10 space-y-4">
+                  <button
+                    onClick={handlePause}
+                    className="flex items-center bg-white p-4 rounded-full text-secondary shadow-lg hover:bg-primary transition"
+                  >
+                    <Pause strokeWidth={2} />
+                  </button>
+                  <p className="text-lg text-gray-200">Pause</p>
+                </div>
+              )}
+
               {/* Video */}
               <video
                 ref={videoRef}
                 controls
-                onPause={handlePause}
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
                 className="h-full w-full rounded-md z-0"
               >
                 <source
@@ -69,7 +89,7 @@ const PalmLeafSection: React.FC = () => {
 
             {/* Description */}
             <div className="flex-1 flex items-center justify-center z-10">
-              <p className="text-gray-700 text-[16px] leading-relaxed text-justify">
+              <p className="text-[#4B4B4B] text-lg font-medium leading-relaxed text-justify">
                 The process began with selecting and preparing the leaves of the
                 talipot palm (<i>Corypha umbraculifera</i>). These leaves were
                 harvested, boiled, and dried to create durable writing surfaces.
