@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import MapImage from '../../assets/Map.png'
 import BlockMap from '../common/BlockMap';
 import LocationMap from '../../assets/images/location-map.png'
-
 import { IoIosSend } from "react-icons/io"
 import { GrMapLocation } from "react-icons/gr";
 import TestVideo from '../../assets/videos/test.mp4'
@@ -98,7 +96,7 @@ const HomeHero: React.FC = () => {
           onClick={handleMapOpen}
           className="group hidden lg:block absolute top-118 bottom-0 right-0 z-50 w-100 h-70  rounded-tr-2xl rounded-tl-3xl shadow-md hover:bg-black/0.2"
         >
-          <img src={MapImage} alt="" className="w-full h-full group-hover:cursor-pointer "/>
+          <img src="Map.PNG" alt="" className="w-full h-full group-hover:cursor-pointer "/>
         </button>
 
         {/* mobile map */}
