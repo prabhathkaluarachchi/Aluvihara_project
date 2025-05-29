@@ -6,6 +6,7 @@ import { IoIosSend } from "react-icons/io"
 import { GrMapLocation } from "react-icons/gr";
 import TestVideo from '../../assets/videos/test.mp4'
 import TempleMap from '../../assets/images/location-map.png'
+import { TbFileSearch } from "react-icons/tb";
 import '../../index.css'
 
 
@@ -94,9 +95,11 @@ const HomeHero: React.FC = () => {
         {/* desktop mapp */}
         <button
           onClick={handleMapOpen}
-          className="group hidden lg:block absolute  -bottom-[5px] right-0 z-50 w-100 h-70  rounded-tr-2xl rounded-tl-3xl shadow-md hover:bg-black/0.2"
+          className="group hidden lg:block absolute  -bottom-[5px] right-0 z-50 w-80 lg:w-98 h-55  rounded-tr-2xl rounded-tl-3xl shadow-md hover:bg-black/0.2 hover:scale-[105%] transition ease-in-out duration-300"
         >
-          <img src="Map.PNG" alt="" className="w-full h-full group-hover:cursor-pointer "/>
+          {/* <TbFileSearch 
+          className="w-10 h-10 bg-red-800 absolute"/> */}
+          <img src="/hero-block-map.png" alt="" className="w-full h-full group-hover:cursor-pointer object-fit"/>
         </button>
 
         {/* mobile map */}
