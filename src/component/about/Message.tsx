@@ -9,10 +9,10 @@ import ImgTestUser from '../../assets/images/test-use.jpg'
 const Message: React.FC = () => {
   return (
     
-    <div className="md:h-[60dvh] lg:min-h-[100dvh]  py-10 px-5 flex justify-center items-center">
+  <div className="md:h-[60dvh] lg:min-h-[100dvh]  py-10 px-5 flex justify-center items-center relative">
   <img
     src={SingleLine}
-    className="w-[980px] hidden lg:block h-0.5 absolute top-405 lg:ml-[340px] z-10"
+    className="w-[1100px] hidden lg:block h-0.5 absolute top-[18%] right-0 z-10"
     alt=""
   />
   <div className="w-[92%] left-0 mx-auto h-[90%] hidden lg:block bg-[#F7F6F6] absolute z-[-10]"></div>
@@ -57,9 +57,9 @@ const Message: React.FC = () => {
       </div>
     </div>
 
-    <div className="relative hidden lg:block w-full max-w-[440px] h-[400px] mt-10 lg:mt-[100px] lg:p-20">
-      <div className="absolute left-[20px] top-0 w-full h-[400px] border border-gray-300 z-0"></div>
-      <div className="absolute top-[-20px] left-[-20px] w-full h-[400px] border border-gray-300 z-0"></div>
+    <div className="relative lg:-ml-20 hidden lg:block w-full max-w-[440px] h-[400px] mt-10 lg:mt-[100px] lg:p-20">
+      <div className="absolute left-[5px] top-0 w-full h-[400px] border border-gray-300 z-0"></div>
+      <div className="absolute top-[-20px] left-[-25px] w-full h-[400px] border border-gray-300 z-0"></div>
       <div className="absolute top-0 left-0 lg:left-1 w-full lg:h-[380px] rounded-md flex items-center justify-center z-10 lg:py-2 lg:px-5">
         <img
           src="message_img.jpg"
@@ -73,7 +73,7 @@ const Message: React.FC = () => {
   <img
     src={LineWithStyle}
     alt=""
-    className="hidden lg:block absolute left-0 top-530 w-1/2"
+    className="hidden lg:block absolute left-0 bottom-20 w-1/2"
   />
 </div>
 
