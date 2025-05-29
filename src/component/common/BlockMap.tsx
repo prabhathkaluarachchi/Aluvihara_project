@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { FiDownload } from "react-icons/fi";
 import { FiPlus } from "react-icons/fi";
 import { HiOutlineMinusSm } from "react-icons/hi";
-import { RxCross2 } from "react-icons/rx";
-import imageUrl from "../../assets/images/location-map.png"
+import { RxCross2 } from "react-icons/rx"
+// import imageUrl from '../../assets/largemap.jpg'
 
 interface MapProps {
     onClose: () => void;
@@ -13,6 +13,8 @@ interface MapProps {
 
 const BlockMap: React.FC<MapProps> = ({onClose}) => {
     const [scale, setScale] = useState<number>(1);
+
+    const imageUrl = '/map-last-one.jpg'
 
     // map download
     const handleDownload = () => {
@@ -41,7 +43,7 @@ const BlockMap: React.FC<MapProps> = ({onClose}) => {
             <Link to="/">
             <div
             onClick={onClose}
-            className="absolute z-222 bg-white top-2 right-25 w-10 h-10 flex items-center justify-center rounded-full shadow-md group">
+            className="absolute z-222 bg-white top-2 right-50 w-10 h-10 flex items-center justify-center rounded-full shadow-md group">
                <RxCross2 
                className="text-gray-400 group-hover:text-primary group-hover:cursor-pointer"/>
             </div>
@@ -49,7 +51,7 @@ const BlockMap: React.FC<MapProps> = ({onClose}) => {
 
             {/* map */}
             <section 
-            className="bg-white w-5/6 h-11/12 rounded-lg mt-10  shadow-md">
+            className="bg-white w-4/6 h-11/12 rounded-lg mt-10  shadow-md">
                 <section
                 className="h-1/12 flex items-center text-gray-400 px-10 justify-between bg-white rounded-tl-lg rounded-tr-lg border-b-3 border-gray-200">
                     <div>
@@ -76,7 +78,7 @@ const BlockMap: React.FC<MapProps> = ({onClose}) => {
                     src={imageUrl}
                     alt="Aluvihara temple location map"
                     style={{ transform: `scale(${scale})`, transition: "transform 0.3s ease" }}
-                    className="h-full w-full object-fit rounded-bl-lg rounded-br-lg" />
+                    className="h-full w-full rounded-bl-lg rounded-br-lg" />
                 </div>
             </section>
         </section>
