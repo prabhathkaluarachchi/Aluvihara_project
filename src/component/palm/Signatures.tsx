@@ -47,8 +47,9 @@ const Signatures: React.FC = () => {
   const currentPair = getCurrentPair();
 
   return (
-    <section className="bg-[#e7a92b] text-gray-900 py-20 px-6 md:px-20">
+    <section className="bg-primary text-gray-900 py-20 px-6 md:px-20 lg:mt-40 mt-20">
       <div className="w-4/5 mx-auto">
+        <div className="absolute bottom-[-2880px] right-[95px] w-[782px] h-[600px] border-4 border-[#DADADA]/40 z-[-200] hidden lg:block" />
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="flex-1 text-center lg:text-left">
             <h2 className="text-white text-3xl font-semibold mb-2">Visitors</h2>
@@ -89,7 +90,9 @@ const Signatures: React.FC = () => {
                         <p className="text-center text-sm font-semibold">
                           {s.author}
                         </p>
-                        <div className="items-center flex justify-center text-lg mt-1"><BsChatQuote className="text-center text-lg mt-1"/></div>
+                        <div className="items-center flex justify-center text-lg mt-1">
+                          <BsChatQuote className="text-center text-lg mt-1" />
+                        </div>
                       </div>
                     </div>
                   </>

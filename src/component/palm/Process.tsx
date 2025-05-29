@@ -190,121 +190,134 @@ const Process = () => {
     setVisibleCount((prev) => prev + 8);
   };
 
-  return (
-    <div className="">
-      <section className="lg:mt-40  py-10 lg:py-20  relative">
-        <div className="absolute -top-80 z-500 -left-80 w-1/2 hidden lg:block">
-          <img src={Cave} alt="temple" className="w-full" />
-        </div>
-        <div className="bg-[#F7F6F6]  pb-4  px-4 md:px-20">
-          <div className="relative justify-center ml-0 z-10 max-w-6xl px-4 flex flex-col">
-            <div className="w-full h-full p-5">
-              <img
-                src={Line}
-                alt=""
-                className="absolute hidden h-[1px] lg:block h-full t-0 -z-940 left-18"
-              />
-            </div>
-            <div className="items-center text-end">
-              <h2 className="lg:mb-20 lg:mt-[-80px] text-2xl md:text-4xl font-semibold lg:right-[0] text-black mb-12 relative z-10">
-                <span className="text-primary block text-3xl font-medium">
-                  Steps of
-                </span>
-                <span className="text-[72px] lg:text-[96px]">Process</span>
-              </h2>
-            </div>
-            {steps.slice(0, visibleCount).map((step, index) => (
-              <div key={index} className="mb-10 lg:mb-0 lg:ml-10 lg:mt-15">
-                <div
-                  className={`flex gap-2 cursor-pointer items-center ${
-                    activeStep === index ? "items-start" : "text-gray-400"
-                  }`}
-                  onClick={() => toggleStep(index)}
-                >
-                  <div
-                    className={`w-10 h-10 lg:p-8 p-3 bg-[#F7F6F6] z-100 rounded-full flex items-center justify-center font-bold border-2 lg:border-4 ${
-                      activeStep === index
-                        ? "border-primary text-black bg-white"
-                        : "border-gray-300 text-gray-400"
-                    }`}
-                  >
-                    {index + 1}
-                  </div>
+  let lineHeight = "240px";
 
-                  <div
-                    className={`w-full max-w-4xl bg-[#DADADA]/38 text-[#4B4B4B]/90 lg:left-0 rounded-4xl p-6 flex flex-col justify-center pr-4 text-sm lg:text-lg ${
-                      activeStep === index
-                        ? "text-black font-semibold bg-white"
-                        : "text-gray-400"
-                    }`}
-                  >
-                    <div className="flex justify-between items-center">
-                      <div className="text-xl">{step.title}</div>
-                      <div>
-                        {activeStep === index ? (
-                          <div className="p-2 border-2 rounded-full border-primary hidden">
-                            <FaArrowUp className="text-primary" />
-                          </div>
-                        ) : (
-                          <div className="p-2 border-2 rounded-full">
-                            <FaArrowDown className="text-gray-400" />
-                          </div>
-                        )}
-                      </div>
-                    </div>
+  if (visibleCount > 20) {
+    lineHeight = "4450px";
+  } else if (visibleCount === 20) {
+    lineHeight = "3270px";
+  } else if (visibleCount === 12) {
+    lineHeight = "2120px";
+  } else if (visibleCount === 4) {
+    lineHeight = `${visibleCount * 240}px`;
+  }
+
+  return (
+    <section className="mt-20 lg:mt-30 lg:pt-20 relative">
+      <div className="absolute -top-80 z-500 -left-80 hidden lg:block">
+        <img src={Cave} alt="temple" className="w-4xl object-fill" />
+      </div>
+      <div className="bg-[#F7F6F6] px-4 md:px-20">
+        <div className="items-center text-start">
+          <h2 className="-top-20 text-2xl md:text-4xl font-semibold text-secondary lg:w-xl lg:left-1/3 ml-2 lg:ml-60 relative z-10">
+            <span className="text-primary block text-3xl font-medium">
+              Steps of
+            </span>
+            <span className="text-[72px] lg:text-[96px]">Process</span>
+          </h2>
+        </div>
+        <div className="relative justify-center z-10 max-w-6xl px-4 flex flex-col lg:ml-56">
+          <div className="w-full h-full lg:p-5">
+            <img
+              src={Line}
+              alt=""
+              className="absolute hidden lg:block h-full -top-20 -z-940 left-20 lg:ml-2.5"
+              style={{ height: lineHeight }}
+            />
+          </div>
+
+          {steps.slice(0, visibleCount).map((step, index) => (
+            <div key={index} className="mb-10 lg:mb-0 lg:ml-10 lg:mb-15">
+              <div
+                className={`flex gap-2 cursor-pointer items-center ${
+                  activeStep === index ? "items-start" : "text-gray-400"
+                }`}
+                onClick={() => toggleStep(index)}
+              >
+                <div
+                  className={`w-10 h-10 lg:p-8 p-3 bg-[#F7F6F6] z-100 rounded-full flex items-center justify-center font-bold border-2 lg:border-4 ${
+                    activeStep === index
+                      ? "border-primary text-black bg-white"
+                      : "border-gray-300 text-gray-400"
+                  }`}
+                >
+                  {index + 1}
+                </div>
+
+                <div
+                  className={`w-full max-w-4xl bg-[#DADADA]/38 text-[#4B4B4B]/90 lg:left-0 rounded-4xl p-6 flex flex-col justify-center pr-4 text-sm lg:text-lg ${
+                    activeStep === index
+                      ? "text-black font-semibold bg-white pr-6"
+                      : "text-gray-400"
+                  }`}
+                >
+                  <div className="flex justify-between items-center">
+                    <div className="text-xl">{step.title}</div>
                     <div>
-                      {activeStep === index && (
-                        <div className="mt-4 bg-white rounded-xl   flex flex-col md:flex-row items-start justify-between gap-6 max-w-4xl relative">
-                          <div className="flex-1">
-                            <p className="text-[16px] w-full font-normal text-gray-700 whitespace-pre-line text-justify">
-                              {step.description}
-                            </p>
-                          </div>
-                          {step.image && (
-                            <div className="w-full lg:block md:w-64 h-40 md:h-48 rounded-xl overflow-hidden">
-                              <img
-                                src={step.image}
-                                alt="Step Visual"
-                                className="w-full h-full object-cover rounded-xl lg:absolute lg:top-[-100px] lg:left-135 lg:w-2/5 lg:h-full"
-                              />
-                            </div>
-                          )}
-                          <div className=" lg:relative p-2 border-2 lg:mt-40  rounded-full border-primary">
-                            <FaArrowUp className="text-primary border-primary" />
-                          </div>
+                      {activeStep === index ? (
+                        <div className="p-2 border-2 rounded-full border-primary hidden">
+                          <FaArrowUp className="text-primary" />
+                        </div>
+                      ) : (
+                        <div className="p-2 border-2 rounded-full">
+                          <FaArrowDown className="text-gray-400" />
                         </div>
                       )}
                     </div>
                   </div>
+                  <div>
+                    {activeStep === index && (
+                      <div className="mt-4 bg-white rounded-xl flex flex-col md:flex-row items-start justify-between gap-7 max-w-4xl relative">
+                        <div className="flex-1">
+                          <p className="text-[16px] w-full font-normal text-gray-700 whitespace-pre-line text-justify">
+                            {step.description}
+                          </p>
+                        </div>
+                        {step.image && (
+                          <div className="w-full lg:block md:w-64 h-40 md:h-48 rounded-xl overflow-hidden">
+                            <img
+                              src={step.image}
+                              alt="Step Visual"
+                              className="w-full h-full object-cover rounded-4xl lg:absolute lg:top-[-100px] lg:left-142 lg:w-2/5 lg:h-full"
+                            />
+                          </div>
+                        )}
+                        <div className=" lg:relative p-2 border-2 lg:mt-40  rounded-full border-primary">
+                          <FaArrowUp className="text-primary border-primary" />
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-            ))}
-
-            <div className="flex items-center gap-4 mt-10 md:ml-[52px]">
-              {visibleCount < steps.length && (
-                <button
-                  onClick={handleMoreSteps}
-                  className="bg-black text-primary px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition flex items-center gap-2"
-                >
-                  More Steps
-                  <FaArrowDown className="border rounded-full p-1 border-primary" />
-                </button>
-              )}
-
-              {visibleCount > 4 && (
-                <button
-                  onClick={() => setVisibleCount(4)}
-                  className="bg-primary cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:bg-primary transition flex items-center gap-2"
-                >
-                  Show Less
-                  <FaArrowUp className="border rounded-full p-1 cursor-pointer border-black" />
-                </button>
-              )}
             </div>
-          </div>
+          ))}
         </div>
-      </section>
-    </div>
+      </div>
+      <div className="px-4 md:px-28">
+        <div className="flex items-center gap-4 mt-10 md:ml-[52px] lg:ml-56 lg:p-6 lg:pb-4 p-3">
+          {visibleCount < steps.length && (
+            <button
+              onClick={handleMoreSteps}
+              className="bg-black text-primary px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition flex items-center gap-2"
+            >
+              More Steps
+              <FaArrowDown className="border rounded-full p-1 border-primary" />
+            </button>
+          )}
+
+          {visibleCount > 4 && (
+            <button
+              onClick={() => setVisibleCount(4)}
+              className="bg-primary cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:bg-primary transition flex items-center gap-2"
+            >
+              Show Less
+              <FaArrowUp className="border rounded-full p-1 cursor-pointer border-black" />
+            </button>
+          )}
+        </div>
+      </div>
+    </section>
   );
 };
 
