@@ -99,7 +99,7 @@ const HomeHero: React.FC = () => {
         >
           {/* <TbFileSearch 
           className="w-10 h-10 bg-red-800 absolute"/> */}
-          <img src="/hero-block-map.png" alt="" className="w-full h-full group-hover:cursor-pointer object-fit"/>
+          <img src="/hero-block-map1.png" alt="" className="w-full h-full group-hover:cursor-pointer object-fit"/>
         </button>
 
         {/* mobile map */}
