@@ -51,7 +51,7 @@ const BlockMap: React.FC<MapProps> = ({onClose}) => {
 
             {/* map */}
             <section 
-            className="bg-white w-4/6 h-11/12 rounded-lg mt-10  shadow-md">
+            className="bg-white w-5/6 h-auto lg:w-1/2 lg:h-auto  rounded-lg mt-10  shadow-md">
                 <section
                 className="h-1/12 flex items-center text-gray-400 px-10 justify-between bg-white rounded-tl-lg rounded-tr-lg border-b-3 border-gray-200">
                     <div>
