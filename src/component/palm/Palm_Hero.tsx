@@ -12,13 +12,15 @@ const HomePage = () => {
           alt="Aluvihara Rock Temple"
           className="absolute top-0 left-0 w-full h-full object-top object-cover z-0"
         />
-        <div className="absolute left-0  bottom-1/2 transform translate-y-1/2 z-20 bg-black/50 px-6 md:px-20 py-6 md:py-10 text-left">
-          <h2 className="text-3xl md:text-4xl font-light">
-            <span className="text-yellow-400 font-semibold">The</span>
-          </h2>
-          <h1 className="text-4xl md:text-6xl font-light">
-            <span className="text-white font-semibold">Timeless Legacy</span>
-          </h1>
+        <div className="w-full pr-4 relative z-10">
+          <div className="lg:w-[800px] md:max-w-[90%] md:mr-auto">
+            <div className="bg-black/70 p-6 rounded-md md:rounded-r-[10px]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-2 pl-0 md:pl-14 font-roboto leading-[1.5] md:leading-[1.5] lg:leading-[1.3] text-center md:text-left">
+                <span className="text-primary block">Palm</span>
+                <span className="text-white">Leaves Process</span>
+              </h1>
+            </div>
+          </div>
         </div>
       </section>
     </div>
