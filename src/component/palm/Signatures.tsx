@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { BsChatQuote } from "react-icons/bs";
+import image1 from '../../assets/images/visitor1.png'
+import image2 from '../../assets/images/visitor2.png'
 
 type Signature = {
   image: string;
@@ -9,17 +11,17 @@ type Signature = {
 
 const signatures: Signature[] = [
   {
-    image: "/src/assets/images/visitor1.png",
+    image: image1,
     text: `Our visit to the Aluvihara was truly unforgettable. Watching the artisans inscribe our names onto the Palm Leaves was mesmerizing. We now have a beautiful, personalized keepsake that connects us to Sri Lankan culture.`,
     author: "Peter Johnson",
   },
   {
-    image: "/src/assets/images/visitor2.png",
+    image: image2,
     text: `The palm leaf inscription experience was a highlight of our trip. Seeing our special message come to life on the palm leaves was magical. It's a unique and meaningful souvenir that we'll treasure forever.`,
     author: "Emma Watson",
   },
   {
-    image: "/src/assets/images/visitor2.png",
+    image: image1,
     text: `The palm leaf inscription experience was a highlight of our trip. Seeing our special message come to life on the palm leaves was magical. It's a unique and meaningful souvenir that we'll treasure forever.`,
     author: "Emma Watson",
   },
