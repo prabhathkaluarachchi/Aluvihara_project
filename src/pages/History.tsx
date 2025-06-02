@@ -67,7 +67,7 @@ const History: React.FC = () => {
     <>
     <div className="text-gray-800">
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:min-h-[600px] text-white flex items-center overflow-hidden">
+      <section className="relative h-[50dvh] min-h-[500px] md:min-h-[600px] text-white flex items-center overflow-hidden">
         <NavBar1 page="history" />
         <img
           src="/test-history-banner.jpg"
