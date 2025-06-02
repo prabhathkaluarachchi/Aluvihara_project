@@ -32,52 +32,58 @@ const BlogPage = () => {
     content: "Full content here...",
     author: "Sumangala Thero",
     date: "05/05/2025",
+    image: "/img/king.png",
   };
 
   const smallPosts: BlogPostType[] = [
     {
-      id: "4",
+      id: "2",
       title: "Yokohi Provident™ in Abrukhara",
       excerpt:
         "Based on the name used in Arabic, Abraham Temple also reminds us of the Buddhist history...",
       content: "Full content here...",
       author: "John Eisenriegl",
       date: "March 2023",
+      image: "/img/king_walagamba.jpg",
     },
     // Add at least 4 more posts to demonstrate load more functionality
     {
-      id: "5",
+      id: "3",
       title: "Ancient Buddhist Manuscripts",
       excerpt:
         "Exploring the preservation techniques of ancient palm leaf manuscripts...",
       content: "Full content here...",
       author: "Sarah Johnson",
       date: "February 2023",
+      image: "/img/king_walagamba.jpg",
     },
     {
-      id: "6",
+      id: "4",
       title: "Meditation Techniques",
       excerpt: "Traditional meditation methods practiced for centuries...",
       content: "Full content here...",
       author: "Michael Chen",
       date: "January 2023",
+      image: "/img/king_walagamba.jpg",
     },
     {
-      id: "7",
+      id: "5",
       title: "Temple Architecture",
       excerpt:
         "The symbolic meaning behind traditional Buddhist temple designs...",
       content: "Full content here...",
       author: "Priya Patel",
       date: "December 2022",
+      image: "/img/king_walagamba.jpg",
     },
     {
-      id: "8",
+      id: "6",
       title: "Buddhist Festivals",
       excerpt: "Annual celebrations and their spiritual significance...",
       content: "Full content here...",
       author: "David Wilson",
       date: "November 2022",
+      image: "/img/king_walagamba.jpg",
     },
   ];
 
