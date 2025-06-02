@@ -51,7 +51,7 @@ const ContactPage: React.FC = () => {
                 <img
                   src={HeroImage}
                   alt="Aluvihara Rock Temple"
-                  className="absolute top-0 left-0 w-full h-full object-cover z-0"
+                  className="absolute top-0 left-0 w-full h-full object-cover object-top z-0"
                 />
                 <div className="w-full pr-4 relative z-10">
                   <div className="lg:w-[800px] md:max-w-[90%] md:mr-auto">
