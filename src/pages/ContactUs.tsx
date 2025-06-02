@@ -46,7 +46,7 @@ const ContactPage: React.FC = () => {
     <>
       <div className="contact-page">
         {/* Hero Section */}
-              <section className="relative min-h-[500px] md:min-h-[600px] text-white flex items-center overflow-hidden">
+              <section className="relative h-[50dvh] min-h-[500px] md:min-h-[600px] text-white flex items-center overflow-hidden">
                 <NavBar1 page="contact" />
                 <img
                   src={HeroImage}

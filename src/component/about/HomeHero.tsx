@@ -119,7 +119,7 @@ const HomeHero: React.FC = () => {
           className="md:absolute w-full mx-auto md:z-30 md:inset-0 md:flex md:items-start md:py-0 absolute z-30 inset-0 flex flex-col items-center md:px-10">
 
           <div
-            className="w-full md:w-7/12 bg-black/60 h-full md:pl-10 lg:pl-30 lg:pt-30 pt-10">
+            className="w-full md:w-7/12 bg-black/60 h-full md:pl-10 lg:pl-30 lg:pt-30 pt-20">
             <div
               className="lg:text-white md:pt-25 md:w-full md:flex md:flex-col md:justify-center md:h-4/5 md:space-y-10 md:w-4/5 text-white pt-20 full flex flex-col justify-center h-4/5 space-y-10 items-center md:items-start p-5 md:p-0">
 

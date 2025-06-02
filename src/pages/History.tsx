@@ -67,12 +67,12 @@ const History: React.FC = () => {
     <>
     <div className="text-gray-800">
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:min-h-[600px] text-white flex items-center overflow-hidden">
+      <section className="relative h-[50dvh] min-h-[500px] md:min-h-[600px] text-white flex items-center overflow-hidden">
         <NavBar1 page="history" />
         <img
-          src="resize.png"
+          src="/test-history-banner.jpg"
           alt="Aluvihara Rock Temple"
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          className="absolute top-0 left-0 w-full h-full z-0"
         />
         <div className="w-full pr-4 relative z-10">
           <div className="lg:w-[800px] md:max-w-[90%] md:mr-auto">

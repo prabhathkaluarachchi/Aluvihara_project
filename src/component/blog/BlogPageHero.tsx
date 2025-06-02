@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogPageHero = () => {
   return (
-    <div className="relative min-h-[500px] md:min-h-[600px] flex items-center">
+    <div className="relative h-[50dvh] min-h-[500px] md:min-h-[600px] flex items-center">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"

@@ -19,7 +19,7 @@ const BlogHero = ({ title, image }: BlogHeroProps) => {
 
       {/* Hero Content */}
       <div className="relative inset-0 bg-black/70 flex items-center justify-center rounded-md w-7xl mx-8 h-40">
-        <h1 className="text-white/90 text-2xl md:text-4xl lg:text-5xl font-semibold text-center px-4">
+        <h1 className="text-white/90 text-2xl md:text-4xl lg:text-5xl font-semibold text-center px-4 lg:mx-10">
           {title}
         </h1>
       </div>

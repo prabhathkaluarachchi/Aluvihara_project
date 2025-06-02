@@ -6,7 +6,7 @@ import ImgLandBanner from "../../assets/pal_land_banner.jpg"
 const HomePage = () => {
   return (
     <div className="text-gray-800">
-      <section className="relative h-[80vh] md:h-[90vh] text-white flex items-center overflow-hidden">
+      <section className="relative h-[50vh] md:h-[90vh] text-white flex items-center overflow-hidden">
         <img
           src={ImgLandBanner}
           alt="Aluvihara Rock Temple"
