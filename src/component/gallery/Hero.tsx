@@ -5,10 +5,9 @@ const Hero = () => {
     <div className="relative h-[50dvh] min-h-[500px] md:min-h-[600px] flex items-center">
       {/* Background Image with Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="absolute inset-0 bg-cover bg-bottom z-0"
         style={{
           backgroundImage: "url(gallery/hero.png)",
-          backgroundPosition: "center 25%",
         }}
       >
         <div className="absolute inset-0 bg-black/10"></div>
