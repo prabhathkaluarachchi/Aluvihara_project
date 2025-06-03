@@ -60,7 +60,7 @@ const HistorySection: React.FC = () => {
 
             {/* Large Image */}
             <img
-              src="/test-history-banner.jpg"
+              src="test/History/about_history_main.jpg"
               alt="Palm Leaf Book"
               className="w-[340px] sm:w-[380px] md:w-full lg:w-3/4 h-[260px] sm:h-[320px] md:h-[400px] rounded-lg object-cover"
             />

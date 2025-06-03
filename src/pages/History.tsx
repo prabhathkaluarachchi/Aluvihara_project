@@ -70,7 +70,7 @@ const History: React.FC = () => {
       <section className="relative h-[50dvh] min-h-[500px] md:min-h-[600px] text-white flex items-center overflow-hidden">
         <NavBar1 page="history" />
         <img
-          src="/test-history-banner.jpg"
+          src="/resize.png"
           alt="Aluvihara Rock Temple"
           className="absolute top-0 left-0 w-full h-full z-0"
         />

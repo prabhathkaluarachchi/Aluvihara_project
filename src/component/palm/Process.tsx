@@ -274,7 +274,7 @@ const Process = () => {
                           </p>
                         </div>
                         {step.image && (
-                          <div className="w-full lg:block md:w-64 h-40 md:h-48 rounded-xl overflow-hidden">
+                          <div className="w-full lg:block md:w-64 h-40 md:h-48 rounded-xl overflow-hidden object-contain justify-start">
                             <img
                               src={step.image}
                               alt="Step Visual"

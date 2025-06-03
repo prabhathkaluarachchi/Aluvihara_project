@@ -2,25 +2,25 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const allImages = [
-  { src: "/gallery/img1.png", desc: "Beautiful mountain land" },
-  { src: "/gallery/img2.png", desc: "Sunset over calm lake." },
-  { src: "/gallery/img3.png", desc: "City skyline at night." },
-  { src: "/gallery/img6.png", desc: "Old vintage car on street." },
-  { src: "/gallery/img8.png", desc: "Peaceful forest trail." },
-  { src: "/gallery/img4.png", desc: "Coastal view with waves." },
-  { src: "/gallery/img7.png", desc: "Modern art sculpture." },
-  { src: "/gallery/img5.png", desc: "Snowy mountain cabin." },
-  { src: "/gallery/img9.png", desc: "Hot air balloons in sky." },
-  { src: "/gallery/img1.png", desc: "Desert dunes under sun." },
-  { src: "/gallery/img4.png", desc: "Waterfall in the jungle." },
-  { src: "/gallery/img6.png", desc: "Rural road during fall." },
-  { src: "/gallery/img1.png", desc: "Reflection in lake mirror." },
-  { src: "/gallery/img2.png", desc: "Bridge over river." },
-  { src: "/gallery/img5.png", desc: "Night view with stars." },
-  { src: "/gallery/img4.png", desc: "Village nestled in hills." },
-  { src: "/gallery/img1.png", desc: "Winding road panorama." },
-  { src: "/gallery/img3.png", desc: "Dense fog in valley." },
-  { src: "/gallery/img5.png", desc: "Boats docked at pier." },
+  { src: "/gallery/img19.png", desc: "Aluvihara Temple" },
+  { src: "/gallery/img2.jpg", desc: "Stone Buddha statue" },
+  { src: "/gallery/img3.png", desc: "Buddha carved in rock" },
+  { src: "/gallery/img4.png", desc: "Old vintage car on street." },
+  { src: "/gallery/img5.png", desc: "Temple bell hanging" },
+  { src: "/gallery/img6.png", desc: "Golden Buddha statue" },
+  { src: "/gallery/img7.png", desc: "Buddha with murals" },
+  { src: "/gallery/img8.png", desc: "Row of painted Buddhas" },
+  { src: "/gallery/img9.png", desc: "Heritage Rock" },
+  { src: "/gallery/img10.png", desc: "Desert dunes under sun." },
+  { src: "/gallery/img11.png", desc: "Waterfall in the jungle." },
+  { src: "/gallery/img12.png", desc: "Rural road during fall." },
+  { src: "/gallery/img13.png", desc: "Reflection in lake mirror." },
+  { src: "/gallery/img14.png", desc: "Monk writing Tipitaka" },
+  { src: "/gallery/img15.png", desc: "Golden Buddha on hill" },
+  { src: "/gallery/img16.png", desc: "Set of Tipitaka" },
+  { src: "/gallery/img17.png", desc: "Monk creating Tipitaka" },
+  { src: "/gallery/img18.png", desc: "Stone temple entrance" },
+  { src: "/gallery/img1.png", desc: "White stupa in trees" },
 ];
 
 export default function GalleryGrid() {
@@ -74,7 +74,7 @@ export default function GalleryGrid() {
                 <img
                   src={item.src}
                   alt={`Gallery image ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-sm font-medium text-center px-2">
                   {item.desc}
