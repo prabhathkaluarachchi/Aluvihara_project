@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const allImages = [
-  { src: "/gallery/img19.png", desc: "Mountain landscape view" },
+  { src: "/gallery/img19.png", desc: "Aluvihara Temple" },
   { src: "/gallery/img2.jpg", desc: "Stone Buddha statue" },
   { src: "/gallery/img3.png", desc: "Buddha carved in rock" },
   { src: "/gallery/img4.png", desc: "Old vintage car on street." },
