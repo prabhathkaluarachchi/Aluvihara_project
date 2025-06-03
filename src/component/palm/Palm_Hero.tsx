@@ -1,7 +1,4 @@
-import React from "react";
-
-import Hero from "../../assets/images/palm-hero.png";
-import ImgLandBanner from "../../assets/pal_land_banner.jpg"
+import ImgLandBanner from "../../assets/images/landing/palmleaves_landing.png";
 
 const HomePage = () => {
   return (
