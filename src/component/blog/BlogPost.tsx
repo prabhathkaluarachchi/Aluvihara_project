@@ -6,6 +6,7 @@ interface BlogPostType {
   content: string;
   author: string;
   date: string;
+  image: string;
   category?: string;
 }
 interface BlogPostProps {
@@ -18,12 +19,9 @@ const BlogPost = ({ post }: BlogPostProps) => {
       {/* Featured Image */}
       <div className="w-full overflow-hidden">
         <img
-          src={`/blog-images/${post.id}.jpg`}
+          src={post.image}
           alt={post.title}
           className="w-full h-full object-cover"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = "/img/king.png";
-          }}
         />
       </div>
 

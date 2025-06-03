@@ -5,5 +5,6 @@ export interface BlogPostType {
     content: string;
     author: string;
     date: string;
+    image: string;
     category?: string;
   }
