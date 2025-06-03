@@ -28,9 +28,13 @@ export const blogPosts: BlogPostType[] = [
           "Nestled among the serene hills of Matale in Sri Lanka lies Aluvihare Rock Temple, a sacred site of profound historical and spiritual importance. While the temple itself is a testament to ancient Buddhist architecture and devotion, it holds a deeper significance in the chronicles of Buddhist heritage—it is the revered location where the Thripitakaya (or Tipitaka) was first committed to writing.",
       },
       {
+        _id: "p2h",
+        content: "What is the Thripitakaya?",
+      },
+      {
         _id: "p2",
         content:
-          'What is the Thripitakaya? The Thripitakaya, meaning "Three Baskets," is the canonical collection of teachings of the Buddha. It is the foundation of Theravāda Buddhism, consisting of three main sections:',
+          'The Thripitakaya, meaning "Three Baskets," is the canonical collection of teachings of the Buddha. It is the foundation of Theravāda Buddhism, consisting of three main sections:',
       },
       {
         _id: "p2b",
@@ -46,6 +50,10 @@ export const blogPosts: BlogPostType[] = [
           "Before the Thripitakaya was ever written down, it was preserved through a rich oral tradition, passed down faithfully by monks across generations.",
       },
       {
+        _id: "p3h",
+        content: "The Turning Point at Aluvihare",
+      },
+      {
         _id: "p3",
         content:
           "The Aluvihare Rock Temple is etched into Buddhist history due to a pivotal event in the 1st century BCE. During the reign of King Walagamba, Sri Lanka faced political unrest and famine. Realizing the fragility of oral tradition amid such chaos, the king sought to preserve the Dhamma in a more permanent form.",
@@ -56,9 +64,17 @@ export const blogPosts: BlogPostType[] = [
           "Thus, in the quiet caves of Aluvihare, a monumental task began. Buddhist monks, under royal patronage, meticulously transcribed the oral teachings of the Buddha onto ola palm leaves. This sacred transcription marked the first time in history that the Thripitakaya was written down, securing it for future generations.",
       },
       {
+        _id: "p5h",
+        content: "Legacy of the Written Dhamma",
+      },
+      {
         _id: "p5",
         content:
           "The preservation of the Thripitakaya in written form was not just a scholarly achievement—it was a spiritual safeguard for the Dhamma itself. It ensured that the teachings of the Buddha would remain intact despite war, famine, or the passage of time. Today, Aluvihare Temple remains a revered pilgrimage site for Buddhists and history enthusiasts alike. The temple’s ancient caves still house replicas and preserved remnants of the original manuscripts, allowing visitors to witness a living link to the origins of Buddhist literature.",
+      },
+      {
+        _id: "p6h",
+        content: "Why Aluvihare Still Matters",
       },
       {
         _id: "p6",
@@ -83,9 +99,17 @@ export const blogPosts: BlogPostType[] = [
           "Nestled amidst the lush hills of Matale, Aluvihare Rock Temple stands as a timeless symbol of Sri Lanka’s spiritual and cultural heritage. Revered as one of the most significant temples in Sri Lanka, Aluvihare is not just a place of worship—it's a sanctuary of history, wisdom, and devotion.",
       },
       {
+        _id: "p2h",
+        content: "A Sacred Chronicle",
+      },
+      {
         _id: "p2",
         content:
           "Aluvihare Rock Temple, also known as Aluvihare Purana Viharaya, dates back to the reign of King Devanampiyatissa in the 3rd century BCE. However, it rose to historical prominence during the 1st century BCE under King Valagamba. Faced with the threat of losing the oral Buddhist teachings during foreign invasions, the king and the monastic community chose Aluvihare as the sacred site to write down the Tripitaka (Buddhist scriptures) for the first time. This monumental act preserved the heart of Theravāda Buddhism and changed the course of religious history.",
+      },
+      {
+        _id: "p3h",
+        content: "More Than Just a Temple",
       },
       {
         _id: "p3",
@@ -93,14 +117,26 @@ export const blogPosts: BlogPostType[] = [
           "What makes Aluvihare truly unique among the temples in Sri Lanka is its blend of spirituality and scholarship. As you explore its cave temples, you’ll encounter ancient murals, inscriptions on rock, and statues of the Buddha, each telling stories from centuries past. The natural rock formations of the temple, combined with the tranquil surroundings, provide a meditative atmosphere for pilgrims and tourists alike.",
       },
       {
+        _id: "p4h",
+        content: "A Must-Visit for History and Culture Enthusiasts",
+      },
+      {
         _id: "p4",
         content:
           "Whether you’re a local pilgrim or an international traveler, visiting Aluvihare offers a deeper understanding of Sri Lanka’s religious journey. It’s a key destination on the cultural map of the island, frequently featured among must-see temples in Sri Lanka. Walking through the temple grounds, one can sense the silent echo of monks reciting sutras, the chisel marks on stone tablets, and the enduring presence of the Dharma.",
       },
       {
+        _id: "p5h",
+        content: "Preserving a Living Heritage",
+      },
+      {
         _id: "p5",
         content:
           "Today, Aluvihare continues to be a center of learning and devotion. Efforts are being made to preserve its ancient texts, protect its sacred structures, and share its story with the world. The temple also plays a vital role in Buddhist education and meditation retreats, making it a living, breathing part of Sri Lanka’s spiritual life.",
+      },
+      {
+        _id: "p6h",
+        content: "Plan Your Visit",
       },
       {
         _id: "p6",

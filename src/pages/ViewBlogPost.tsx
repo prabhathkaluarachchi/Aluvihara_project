@@ -24,6 +24,12 @@ const ViewBlogPost: React.FC = () => {
   const p5 = blog?.content.find((p) => p._id === "p5");
   const p6 = blog?.content.find((p) => p._id === "p6");
 
+  const p2h = blog?.content.find((p) => p._id === "p2h");
+  const p3h = blog?.content.find((p) => p._id === "p3h");
+  const p4h = blog?.content.find((p) => p._id === "p4h");
+  const p5h = blog?.content.find((p) => p._id === "p5h");
+  const p6h = blog?.content.find((p) => p._id === "p6h");
+
   if (!blog) {
     return (
       <h1 className="text-center text-4xl font-bold mt-10">
@@ -64,9 +70,12 @@ const ViewBlogPost: React.FC = () => {
                 <div className="md:col-span-3 grid md:grid-cols-3 gap-12">
                   {/* Left side */}
                   <div className="md:col-span-2 space-y-6">
+                    {p2h && (
+                      <h6 className="font-medium leading-2">{p2h.content}</h6>
+                    )}
                     {p2 && (
                       <p>
-                        {p2.content}{" "}
+                        {p2.content}
                         {p2b && p2b.list && (
                           <ol className="list-decimal pl-8 leading-5">
                             {p2b.list.map((point, idx) => (
@@ -78,6 +87,9 @@ const ViewBlogPost: React.FC = () => {
                         )}
                         {p2c && <p className="mt-2">{p2c.content}</p>}
                       </p>
+                    )}
+                    {p3h && (
+                      <h6 className="font-medium leading-2">{p3h.content}</h6>
                     )}
                     {p3 && <p>{p3.content}</p>}
                   </div>
@@ -91,15 +103,24 @@ const ViewBlogPost: React.FC = () => {
                     />
                   </div>
                 </div>
+                {p4h && (
+                  <h6 className="font-medium md:col-span-3">{p4h.content}</h6>
+                )}
                 {p4 && (
                   <div className="md:col-span-3">
                     <p>{p4.content}</p>
                   </div>
                 )}
+                {p5h && (
+                  <h6 className="font-medium leading-2">{p5h.content}</h6>
+                )}
                 {p5 && (
                   <div className="md:col-span-3">
                     <p>{p5.content}</p>
                   </div>
+                )}
+                {p6h && (
+                  <h6 className="font-medium leading-2">{p6h.content}</h6>
                 )}
                 {p6 && (
                   <div className="md:col-span-3">
