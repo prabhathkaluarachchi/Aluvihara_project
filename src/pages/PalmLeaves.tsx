@@ -19,7 +19,8 @@ const PalmLeaves: React.FC = () => {
         <NavBar1 page="palm" />
 
         {/* hero section */}
-        <section className="h-auto w-full">
+        <section className="relative h-[50dvh] min-h-[500px] md:min-h-[600px] text-white items-center overflow-hidden">
+          {/* <section className="h-auto w-full"> */}
           <Palm_Hero />
         </section>
       </header>
