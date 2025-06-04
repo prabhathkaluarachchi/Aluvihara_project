@@ -33,146 +33,146 @@ import Step28 from "../../assets/images/steps/step28.jpg";
 
 const steps = [
   {
-    title: "Fully grown palm tree.",
+    title: "Fully grown palm tree",
     description: `Palm trees, particularly varieties like Borassus flabellifer (Palmyra Palm) and Corypha umbraculifera (Talipot Palm), are the primary sources for palm leaf manuscripts. The Palmyra Palm thrives in dry climates and can grow up to 15-20 meters, with its trunk reaching 1-2 meters in diameter. These trees are the main providers of leaves used for writing due to their size, flexibility, and the durability of their leaves.`,
     image: Step1,
   },
   {
-    title: " Cutting tender bud",
+    title: "Cutting tender bud",
     description: `The process begins with cutting the tender bud from the crown of the palm tree. This bud is carefully harvested as it is essential for obtaining the young leaves used in manuscript preparation. The tender bud, being soft and flexible, is ideal for writing purposes due to its quality.`,
     image: Step2,
   },
   {
-    title: " The tender bud is lowered down.",
+    title: "The tender bud is lowered down",
     description: `After cutting the tender bud from the crown, it is lowered down carefully from the tree. This step ensures that the delicate bud remains intact and is prepared for further processing to extract the leaves used in writing.`,
     image: Step3,
   },
   {
-    title: "Fully opened tender palm bud.",
+    title: "Fully opened tender palm bud",
     description: `Once the bud has been lowered and is ready for use, it fully opens to reveal young palm leaves. These leaves are soft, light in color, and flexible, making them ideal for the etching and writing processes required in palm leaf manuscripts.`,
     image: Step4,
   },
   {
-    title: "Subsections are separated.",
+    title: "Subsections are separated",
     description: `The palm leaves are then separated into subsections, each of which will be used for writing. This process involves carefully detaching the sections to ensure that the leaves are in the right size and condition for further processing.`,
     image: Step5,
   },
   {
-    title: "Midribs of each leaf are removed.",
+    title: "Midribs of each leaf are removed",
     description: `After the leaves are separated, the mid ribs (the central vein) of each palm leaf are removed. This step ensures that the leaves are thin, flexible, and suitable for writing. Removing the mid ribs also helps in the smoothing process of the leaf surface.`,
     image: Step6,
   },
   {
-    title: "A hole is cut at the end of each leaf.",
+    title: "A hole is cut at the end of each leaf",
     description: `A hole is cut at the end of each leaf strip to facilitate hanging. The leaves are then exposed to natural elements such as breeze, sunlight, and dew, which helps in the drying process and enhances the flexibility of the leaves.`,
     image: Step7,
   },
   {
-    title: " Leaves are formed into rolls.",
+    title: "Leaves are formed into rolls",
     description: `Once the leaves are prepared, they are wound into rolls. These rolls are then placed in boiling water as part of the boiling process, which softens and sanitizes the leaves for writing. The boiling also enhances their durability.`,
     image: Step8,
   },
 
   {
-    title: "The boiling process.",
+    title: "The boiling process",
     description: `Several Rolls Are Placed in a Large Vessel, Kept on a Fireplace, One Over the Other Till the Vessel Is Almost Full. Then the Vessel Is Filled with Water and It Is Tightly Closed with a Lid and Heated The boiling process involves placing multiple rolls of palm leaves into a large vessel, which is then heated on a fireplace. The vessel is filled with water and tightly sealed to allow the heat to soften the leaves effectively. `,
     image: Step9,
   },
   {
-    title: "Further aid in the boiling process.",
+    title: "Further aid in the boiling process",
     description: `On Top of Each Roll, Slices of Raw Papaw, Pineapple Leaves, and Keppetiya Twigs Are Placed To further aid in the boiling process, various natural substances like slices of raw papaw, pineapple leaves, and Keppetiya twigs are placed on top of each roll. These aterials contribute to the preservation and texture of the leaves.`,
     image: Step10,
   },
   {
-    title: "Leaves are put in breeze.",
+    title: "Leaves are put in breeze",
     description: `After boiling, the leaves are removed and hung up on a cord to allow them to breeze for several days. This step helps the leaves dry out while maintaining their natural flexibility. `,
     image: Step11,
   },
   {
-    title: "  The softly dried leaves are exposed to mild sun. ",
+    title: "The softly dried leaves are exposed to mild sun",
     description: `The leaves are then exposed to mild sunlight for several days to ensure they are thoroughly dried. This step is crucial for ensuring that the leaves are not too brittle for writing`,
     image: Step12,
   },
   {
-    title: ". Leaves are put outside on grass.",
+    title: "Leaves are put outside on grass",
     description: `Next, the sun-dried leaves are placed on grass to catch morning dew. The dew helps in the conditioning of the leaves, making them more supple and easier to handle for writing.`,
     image: Step13,
   },
   {
-    title: ".Leaf strips are wound in concentric way.",
+    title: "Leaf strips are wound in concentric way",
     description: `The dried leaf strips are wound in a concentric manner to ensure they are kept in proper storage conditions. This winding helps protect the leaves from damage during storage.`,
     image: Step14,
   },
   {
-    title: " Polishing the leaf strips.",
+    title: "Polishing the leaf strips",
     description: `The leaf strips are polished by being rolled against a round wooden pole soaked in cold water. This process flattens the leaves and removes any wrinkles, preparing them for the etching and writing stages.`,
     image: Step15,
   },
   {
-    title: " Leaves are punched with two holes. ",
+    title: "Leaves are punched with two holes",
     description: `The polished leaf strips are then punched with two holes on each side. This is done to allow the cord to pass through the holes, preparing the leaves for binding and storage.`,
     image: Step16,
   },
   {
-    title: ". A cord is inserted through the two holes ",
+    title: "A cord is inserted through the two holes",
     description: `After the holes are punched, the leaves are threaded through a cord and singed with a red-hot iron rod. This step ensures that the leaves are secured and ready for the writing process.`,
     image: Step17,
   },
   {
-    title: "The leaves are put in the mould.",
+    title: "The leaves are put in the mould",
     description: `The leaves are placed into a mould and tightened with bolts and nuts. This step is important for securing the leaves in place during the final stages of preparation.`,
     image: Step18,
   },
   {
-    title: "The bundle are cut into the required size.",
+    title: "The bundle are cut into the required size",
     description: `The four sides of the palm leaf bundle are carefully cut to the required size with a sharp knife. This ensures that the leaves are uniform in size and ready for the writing and binding processes.`,
     image: Step19,
   },
   {
-    title: " The bundle is signed with a red hot metal rod.",
+    title: "The bundle is signed with a red hot metal rod",
     description: `To prevent damage from moths, the edges of the bundle are singed with a red-hot iron rod. This step ensures that the folios are properly preserved.`,
     image: Step20,
   },
 
   {
-    title: " The bundle of leaf strips.",
+    title: "The bundle of leaf strips",
     description: `At this stage, the bundle of palm leaf strips is fully prepared, ready for the next steps of writing and binding…`,
     image: Step21,
   },
   {
-    title: " Letters are etched with the stylus.",
+    title: "Letters are etched with the stylus",
     description: `The stylus used by the scribe is typically made of metal or wood, and it helps carve the letters onto the surface of the leaf. The stylus is designed for precise control over the writing process.`,
     image: Step22,
   },
   {
-    title: " The stylus used by the scriber for writing.",
+    title: "The stylus used by the scriber for writing",
     description: `After cutting the tender bud from the crown, it is lowered down carefully from the tree. This step ensures that the delicate bud remains intact and is prepared for further processing to extract the leaves used in writing.`,
     image: Step23,
   },
   {
-    title: "Leaves are inked by rubbing the leaf surface.",
+    title: "Leaves are inked by rubbing the leaf surface",
     description: `After the letters are etched, they are inked by rubbing the surface with a cotton cloth dipped in a mixture of charcoal, dummala oil, and kekuna oil. This helps bring out the letters clearly.As well, this application safeguards palm leaves from moth-eating. 
 `,
     image: Step24,
   },
   {
-    title: " Make the letters more distinct.",
+    title: "Make the letters more distinct",
     description: `The leaf surface is then cleaned using kurakkan powder to absorb excess moisture and remove the excess black coloring from the ink. This step ensures that the etched letters are distinct.`,
     image: Step25,
   },
 
   {
-    title: " Etched letters look like this.",
+    title: "Etched letters look like this",
     description: `After the cleaning process, the etched letters become more distinct, with the black coloring now settled and the letters easier to read.`,
     image: Step26,
   },
   {
-    title: "The manuscript book is bound.",
+    title: "The manuscript book is bound",
     description: `Once the writing is complete, the manuscript book is bound, ensuring that the palm leaf folios are securely held together and preserved.`,
     image: Step27,
   },
   {
-    title: "Enclosure of the folios.",
+    title: "Enclosure of the folios",
     description: `The final step involves enclosing the folios in two wooden panels, which often feature geometrical or floral designs. The panels are secured by passing a cord through the punched holes, ensuring the manuscript is ready for use or storage.`,
     image: Step28,
   },
