@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
 
                     <p 
                     className="text-ternary text-sm text-justify lg:text-left lg:text-lg">
-                        Visitors are all Welcome!. Discover the serenity and history of Aluvihara – a spiritual journey through ancient Buddhist heritage. Experience culture, tranquility, and timeless wisdom. Visit today
+                        Visitors are all Welcome! Discover the serenity and history of Aluvihara – a spiritual journey through ancient Buddhist heritage. Experience culture, tranquility, and timeless wisdom. Visit today
                     </p>
                 </section>
                 
