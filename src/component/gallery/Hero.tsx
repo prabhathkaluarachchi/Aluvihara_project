@@ -1,13 +1,13 @@
+import bgImage from "../../assets/images/landing/Gallery_landing.png";
+
 const Hero = () => {
-
-
   return (
     <div className="relative h-[50dvh] min-h-[500px] md:min-h-[600px] flex items-center">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-bottom z-0"
         style={{
-          backgroundImage: "url(gallery/hero.png)",
+          backgroundImage: `url(${bgImage})`,
         }}
       >
         <div className="absolute inset-0 bg-black/10"></div>
