@@ -50,11 +50,17 @@ export default function GalleryGrid() {
       {/* Titles */}
       <div className="z-20 flex justify-center lg:justify-end lg:px-5">
         <div className="text-center lg:text-left">
-          <p className="text-[#EBB23E] text-[36px] md:text-[48px] font-medium leading-[1]">
+          {/* <p className="text-[#EBB23E] text-[36px] md:text-[48px] font-medium leading-[1]">
             Discover
           </p>
           <h2 className="text-[48px] md:text-[70px] font-bold text-black mb-6 leading-[1]">
             Highlights
+          </h2> */}
+          <h2 className="text-2xl md:text-4xl font-semibold text-secondary mb-5">
+            <span className="text-primary block text-3xl font-medium">
+              Discover
+            </span>
+            <span className="text-[72px] lg:text-[96px]">Highlights</span>
           </h2>
         </div>
       </div>
@@ -130,7 +136,7 @@ export default function GalleryGrid() {
               <div className="hidden md:flex justify-center mt-6">
                 <button
                   onClick={() => setShowMore(false)}
-                  className="flex items-center bg-black text-yellow-400 px-4 py-2 rounded-full shadow hover:bg-yellow-500 hover:text-black transition"
+                  className="flex items-center bg-secondary hover:bg-secondary/[0.9] text-primary hover:text-primary/[0.9] px-5 py-2 rounded-[10px] shadow transition"
                 >
                   <ChevronDown className="rotate-180 mr-2" />
                   Collapse
@@ -189,7 +195,7 @@ export default function GalleryGrid() {
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 text-white"
+            className="absolute top-24 right-4 text-white"
           >
             <X size={32} />
           </button>
@@ -203,7 +209,7 @@ export default function GalleryGrid() {
           <img
             src={images[activeIndex].src}
             alt="Enlarged"
-            className="max-w-[90vw] max-h-[80vh] rounded-md shadow-xl"
+            className="max-w-[90vw] max-h-[70vh] rounded-md shadow-xl"
           />
           <button
             onClick={nextImage}
