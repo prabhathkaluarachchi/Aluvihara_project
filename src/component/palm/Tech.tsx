@@ -59,8 +59,8 @@ const PalmLeafSection: React.FC = () => {
                 </div>
               )}
 
-              {isPlaying && isHovered && (
-                <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center z-10 space-y-4">
+              {/* {isPlaying && isHovered && (
+                <div className="absolute bg-black/40 flex flex-col items-center justify-center z-10 space-y-4">
                   <button
                     onClick={handlePause}
                     className="flex items-center bg-white p-4 rounded-full text-secondary shadow-lg hover:bg-primary transition"
@@ -69,7 +69,7 @@ const PalmLeafSection: React.FC = () => {
                   </button>
                   <p className="text-lg text-gray-200">Pause</p>
                 </div>
-              )}
+              )} */}
 
               {/* Video */}
               <video
