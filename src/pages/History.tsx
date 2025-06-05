@@ -4,7 +4,7 @@ import NavBar1 from "../component/common/NavBar1";
 import Footer from "../component/common/Footer";
 
 import HistoryImage from "../assets/images/History.jpg";
-import Hero from "../assets/images/landing/history_landing.png";
+import Hero from "../assets/images/landing/history_landing - Copy.webp";
 import tiptika from "../assets/images/tiptika.png";
 import timeline from "../assets/images/timeline.svg";
 import showmore from "../assets/images/showmore.svg";

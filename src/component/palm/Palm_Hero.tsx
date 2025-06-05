@@ -1,4 +1,4 @@
-import ImgLandBanner from "../../assets/images/landing/palmleaves_landing.png";
+import ImgLandBanner from "../../assets/images/landing/palmleaves_landing.webp";
 
 const HomePage = () => {
   return (
