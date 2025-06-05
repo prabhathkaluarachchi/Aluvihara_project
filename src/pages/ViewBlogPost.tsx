@@ -17,7 +17,12 @@ const ViewBlogPost: React.FC = () => {
 
   const p1 = blog?.content.find((p) => p._id === "p1");
   const p2 = blog?.content.find((p) => p._id === "p2");
-  const p2b = blog?.content.find((p) => p._id === "p2b");
+  const p2bh = blog?.content.find((p) => p._id === "p2bh");
+  const p2bh2 = blog?.content.find((p) => p._id === "p2bh2");
+  const p2bh3 = blog?.content.find((p) => p._id === "p2bh3");
+  const p2bc = blog?.content.find((p) => p._id === "p2bc");
+  const p2bc2 = blog?.content.find((p) => p._id === "p2bc2");
+  const p2bc3 = blog?.content.find((p) => p._id === "p2bc3");
   const p2c = blog?.content.find((p) => p._id === "p2c");
   const p3 = blog?.content.find((p) => p._id === "p3");
   const p4 = blog?.content.find((p) => p._id === "p4");
@@ -60,7 +65,7 @@ const ViewBlogPost: React.FC = () => {
                 </h1>
                 <p className="text-md text-[#4F4C53]/40">{blog.date}</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 space-y-6 text-[18px] leading-6 text-justify text-[#4B4B4B] relative z-20 lg:mr-96 mt-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 space-y-6 text-[18px] font-light leading-7 text-justify text-secondary relative z-20 lg:mr-96 mt-12">
                 {p1 && (
                   <div className="md:col-span-3">
                     <p>{p1.content}</p>
@@ -76,15 +81,21 @@ const ViewBlogPost: React.FC = () => {
                     {p2 && (
                       <p>
                         {p2.content}
-                        {p2b && p2b.list && (
-                          <ol className="list-decimal pl-8 leading-5">
-                            {p2b.list.map((point, idx) => (
-                              <li key={idx} className="mt-2">
-                                {point}
-                              </li>
-                            ))}
-                          </ol>
+                        {/* list data 1 */}
+                        {p2bh && (
+                          <span className="font-normal">{p2bh.content}</span>
                         )}
+                        {p2bc && <span>{p2bc.content}</span>}
+                        {/* list data 2 */}
+                        {p2bh2 && (
+                          <span className="font-normal">{p2bh2.content}</span>
+                        )}
+                        {p2bc2 && <span>{p2bc2.content}</span>}
+                        {/* list data 3 */}
+                        {p2bh3 && (
+                          <span className="font-normal">{p2bh3.content}</span>
+                        )}
+                        {p2bc3 && <span>{p2bc3.content}</span>}
                         {p2c && <p className="mt-2">{p2c.content}</p>}
                       </p>
                     )}
@@ -97,7 +108,7 @@ const ViewBlogPost: React.FC = () => {
                   {/* Right side */}
                   <div className="flex justify-end items-center py-2">
                     <img
-                      src="/img/king1.jpg"
+                      src={blog.image2}
                       alt="King Walagamba"
                       className="w-full h-full object-cover "
                     />
@@ -132,7 +143,7 @@ const ViewBlogPost: React.FC = () => {
             <img
               src="/img/Group19.png"
               className="mt-8 w-11/12 md:mt-20 relative z-50 -left-0"
-            />{" "}
+            />
           </div>
         </div>
 
