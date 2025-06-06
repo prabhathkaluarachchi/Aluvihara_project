@@ -1,4 +1,4 @@
-import bgImage from "../../assets/images/landing/Gallery_landing.png";
+import bgImage from "../../assets/images/landing/Gallery_landing.webp";
 
 const Hero = () => {
   return (

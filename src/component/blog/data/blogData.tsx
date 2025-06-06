@@ -14,6 +14,8 @@ export interface BlogPostType {
   date: string;
   image2: string;
 }
+import img from "../../../assets/images/tripitaka2.jpg";
+import img2 from "../../../assets/images/tripitaka.jpg";
 
 export const blogPosts: BlogPostType[] = [
   {
@@ -37,12 +39,29 @@ export const blogPosts: BlogPostType[] = [
           'The Thripitakaya, meaning "Three Baskets," is the canonical collection of teachings of the Buddha. It is the foundation of Theravāda Buddhism, consisting of three main sections:',
       },
       {
-        _id: "p2b",
-        list: [
-          "Vinaya Pitaka – the rules of monastic discipline.",
-          "Sutta Pitaka – the sermons and discourses of the Buddha.",
-          "Abhidhamma Pitaka – the philosophical and psychological analysis of Buddhist doctrine.",
-        ],
+        _id: "p2bh",
+        content: " Vinaya Pitaka",
+      },
+      {
+        _id: "p2bc",
+        content: " (the rules of monastic discipline),",
+      },
+      {
+        _id: "p2bh2",
+        content: " Sutta Pitaka",
+      },
+      {
+        _id: "p2bc2",
+        content: " (the sermons and discourses of the Buddha),",
+      },
+      {
+        _id: "p2bh3",
+        content: " Abhidhamma Pitaka",
+      },
+      {
+        _id: "p2bc3",
+        content:
+          " (the philosophical and psychological analysis of Buddhist doctrine).",
       },
       {
         _id: "p2c",
@@ -82,10 +101,10 @@ export const blogPosts: BlogPostType[] = [
           "Aluvihare is not just a temple; it is a symbol of intellectual and spiritual resilience. In an age where wisdom was preserved by word of mouth, the monks at Aluvihare made the courageous and visionary decision to inscribe the words of the Enlightened One onto stone and leaf. As we stand before the weathered rocks and tranquil halls of the Aluvihare Rock Temple, we are reminded of the sacred duty carried out within these walls—the protection of the Thripitakaya, the beating heart of Theravāda Buddhism. Whether you’re a pilgrim, a historian, or a curious traveler, Aluvihare invites you to explore its sacred grounds and connect with the spiritual legacy that echoes through its ancient stones.",
       },
     ],
-    image: "/img/king.png",
+    image: img,
     author: "Sumangala Thero",
     date: "2 June 2025",
-    image2: "/img/king1.jpg",
+    image2: img2,
   },
   {
     id: "2",

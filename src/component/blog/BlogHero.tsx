@@ -5,7 +5,7 @@ interface BlogHeroProps {
 
 const BlogHero = ({ title, image }: BlogHeroProps) => {
   return (
-    <div className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[400px] flex items-center justify-center">
+    <div className="relative min-h-[500px] md:min-h-[400px] flex items-center justify-center">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
@@ -19,7 +19,7 @@ const BlogHero = ({ title, image }: BlogHeroProps) => {
 
       {/* Hero Content */}
       <div className="relative inset-0 bg-black/70 flex items-center justify-center rounded-md w-7xl mx-8 h-40">
-        <h1 className="text-white/90 text-2xl md:text-4xl lg:text-5xl font-semibold text-center px-4 lg:mx-10">
+        <h1 className="text-white/90 text-2xl md:text-4xl lg:text-5xl font-semibold text-center px-4 lg:mx-10 md:leading-12 lg:leading-16">
           {title}
         </h1>
       </div>
