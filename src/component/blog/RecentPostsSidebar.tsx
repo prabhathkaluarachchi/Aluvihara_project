@@ -1,29 +1,32 @@
 import { BlogPostType } from '../blog/types';
+import { blogPosts } from "../../component/blog/data/blogData";
+import { Link } from 'react-router-dom';
 
-interface RecentPostsSidebarProps {
-  posts: BlogPostType[];
-}
+// interface RecentPostsSidebarProps {
+//   posts: BlogPostType[];
+// }
 
-const RecentPostsSidebar = ({ posts }: RecentPostsSidebarProps) => {
+const RecentPostsSidebar = () => {
   return (
     <div className="bg-gray-50 p-6 rounded-lg">
-      <h3 className="text-xl font-bold mb-6 border-b pb-3">Most Popular</h3>
-      <ul className="space-y-4">
-        {posts.map((post) => (
-          <li key={post.id}>
+      <h3 className="text-xl font-bold border-b pb-3">Most Popular</h3>
+      <div className="space-y-4">
+        {blogPosts.slice(0, 4).map((post) => (
+          <Link className=''
+            to={`/viewblog/${post.id}`}
+            onClick={() => (window.location.href = `/viewblog/${post.id}`)}
+          >
+          <div key={post.id} className='my-4'>
             <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-all shadow-sm hover:shadow-md">
               {/* Image - square aspect ratio */}
               <div className="flex-shrink-0 w-16 h-16 rounded-md overflow-hidden border border-gray-100">
                 <img 
-                  src={`/blog-images/${post.id}.jpg`}
+                  src={post.image}
                   alt={post.title}
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'blog.jpg';
-                  }}
                 />
               </div>
-              {/* Title and Date */}
+              {/* Title and Date 1*/}
               <div className="flex-1 min-w-0">
                 <h4 className="font-medium text-[#4B4B4B] hover:text-[#EBB23E] cursor-pointer line-clamp-2">
                   {post.title}
@@ -31,9 +34,10 @@ const RecentPostsSidebar = ({ posts }: RecentPostsSidebarProps) => {
                 <p className="text-sm text-gray-500 mt-1.5">{post.date}</p>
               </div>
             </div>
-          </li>
+          </div>
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
