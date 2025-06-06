@@ -104,7 +104,7 @@ const History: React.FC = () => {
                 <span className="text-yellow-500">Unveiling </span>
               </h2>
               <h2 className="text-[42px] text-center lg:text-left md:text-[96px] mb-3 font-bold text-black leading-tight lg:ml-20">
-                <span className="text-black">History</span>
+                <span className="text-[#181415]">History</span>
               </h2>
               <p className="mb-4 text-[18px] text-justify lg:mt-10">
                 Aluvihara Temple, located in Matale, Sri Lanka, is a
@@ -132,7 +132,7 @@ const History: React.FC = () => {
         <section className="w-full md:mt-10 bg-neutral-100 h-auto lg:h-[90dvh] flex lg:mt-40 justify-center items-center">
           <div className="w-5/6 mx-auto h-auto lg:h-10/12 flex flex-col lg:flex-row justify-between">
             <section className="w-full lg:w-3/5">
-              <h1 className="mb-5 lg:mb-0 text-[48px] font-bold text-black text-center lg:text-left  md:text-[96px] lg:mt-[-120px] flex flex-col gap-0">
+              <h1 className="mb-5 lg:mb-0 text-[48px] font-bold text-[#181415] text-center lg:text-left  md:text-[96px] lg:mt-[-120px] flex flex-col gap-0">
                 <span className="text-[36px] md:text-3xl text-primary lg:mb-[-30px]">
                   The
                 </span>

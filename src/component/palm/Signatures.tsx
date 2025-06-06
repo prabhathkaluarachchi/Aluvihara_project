@@ -55,7 +55,7 @@ const Signatures: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="flex-1 text-center lg:text-left">
             <h2 className="text-white text-3xl font-semibold mb-2">Visitors</h2>
-            <h1 className="text-[64px] lg:text-[96px] text-black mb-4 leading-tight">
+            <h1 className="text-[64px] lg:text-[96px] text-[#181415] mb-4 leading-tight">
               Signatures
             </h1>
             <p className="text-lg text-gray-800 leading-relaxed mb-4 text-justify">

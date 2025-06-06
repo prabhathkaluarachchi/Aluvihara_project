@@ -31,7 +31,7 @@ export default function TimelessHeritage() {
                 <span className="text-primary block text-3xl font-medium">
                   Timeless
                 </span>
-                <span className="text-[72px] lg:text-[96px]">Heritage</span>
+                <span className="text-[72px] lg:text-[96px] text-[#181415]">Heritage</span>
               </h2>
               <p className="text-gray-700 mb-4 text-justify text-[18px]">
                 Step into a world where history and spirituality converge. This
@@ -52,7 +52,7 @@ export default function TimelessHeritage() {
               <img
                 src="/gallery/heritage1.png"
                 alt="Heritage 1"
-                className="absolute bottom-0 left-20 w-[260px] z-20"
+                className="absolute bottom-0 left-20 w-[260px] z-20 rounded-sm"
               />
               <img
                 src="/gallery/heritage2.png"
@@ -72,7 +72,7 @@ export default function TimelessHeritage() {
               <span className="text-primary block text-3xl font-medium">
                 Timeless
               </span>
-              <span className="text-[72px] lg:text-[96px]">Heritage</span>
+              <span className="text-[72px] lg:text-[96px] text-[#181415]">Heritage</span>
             </h2>
           </div>
 

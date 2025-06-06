@@ -62,7 +62,7 @@ const App: React.FC = () => {
         <section 
         className="flex flex-col w-full mx-auto py-2 h-auto lg:h-[90dvh] mt-30 lg:mt-50 flex border-y-5 border-gray-300 md:mt-40">
           <h1 
-            className="text-[38px] lg:text-header text-center lg:text-left font-regular  w-5/6 mx-auto flex items-center justify-center lg:items-left lg:justify-end lg:mt-[-90px]">Blogs</h1>
+            className="text-[38px] lg:text-header text-center lg:text-left font-semibold  w-5/6 mx-auto flex items-center justify-center lg:items-left lg:justify-end lg:mt-[-90px]">Blogs</h1>
           <Slider />
         </section>
 
@@ -82,7 +82,7 @@ const App: React.FC = () => {
           <section 
           className="w-5/6 mx-auto h-10/12">
             <h1 
-            className="text-[38px] lg:text-header text-center lg:text-left font-regular mx-auto flex items-center justify-center lg:items-left lg:justify-start mb-5 lg:mb-0" >Events</h1>
+            className="text-[38px] lg:text-header text-center lg:text-left font-semibold mx-auto flex items-center justify-center lg:items-left lg:justify-start mb-5 lg:mb-0" >Events</h1>
 
             <EventSlider 
               slides={sliderData} />
