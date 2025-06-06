@@ -1,10 +1,9 @@
 export default function TimelessHeritage() {
   return (
     <div className="px-4 sm:px-6 md:px-16 lg:px-0 py-10 md:py-20 lg:mt-15  relative">
-      
       {/* New absolute background rectangle - FULL WIDTH, NO LEFT MARGIN */}
       <div className="hidden lg:block">
-        <div className="absolute top-10 left-0 right-[180px] h-full bg-[#F7F6F6] z-0"  ></div>
+        <div className="absolute top-10 left-0 right-[180px] h-full bg-[#F7F6F6] z-0"></div>
       </div>
 
       {/* DESKTOP (lg and up) */}
@@ -25,14 +24,14 @@ export default function TimelessHeritage() {
             ></div>
           </div>
 
-          <div className="max-w-[80%] mx-auto grid lg:grid-cols-2 gap-8 items-center">
+          <div className="max-w-[80%] mx-auto grid lg:grid-cols-2 gap-8">
             {/* Left: Text */}
             <div className="pr-8">
-              <p className="text-[#EBB23E] text-[36px] md:text-[48px] font-medium leading-[1]  lg:text-left text-center">
-                Timeless
-              </p>
-              <h2 className="text-[48px] md:text-[70px] font-bold text-black mb-6 leading-[1] lg:text-left text-center">
-                Heritage
+              <h2 className="text-2xl md:text-4xl font-semibold text-secondary mb-5">
+                <span className="text-primary block text-3xl font-medium">
+                  Timeless
+                </span>
+                <span className="text-[72px] lg:text-[96px]">Heritage</span>
               </h2>
               <p className="text-gray-700 mb-4 text-justify text-[18px]">
                 Step into a world where history and spirituality converge. This
@@ -66,16 +65,16 @@ export default function TimelessHeritage() {
       </div>
 
       {/* MOBILE & TABLET (below lg) remains unchanged */}
-<div className="block lg:hidden">
-  <div className="bg-[#F7F6F6] rounded-lg p-5">
-    <div className="text-center">
-      <p className="text-[#EBB23E] text-[36px] md:text-[48px] font-medium leading-[1]">
-        Timeless
-      </p>
-      <h2 className="text-[48px] md:text-[70px] font-bold text-black mb-4 leading-[1]">
-        Heritage
-      </h2>
-    </div>
+      <div className="block lg:hidden">
+        <div className="bg-[#F7F6F6] rounded-lg p-5">
+          <div className="text-center">
+            <h2 className="text-2xl md:text-4xl font-semibold text-secondary mb-5">
+              <span className="text-primary block text-3xl font-medium">
+                Timeless
+              </span>
+              <span className="text-[72px] lg:text-[96px]">Heritage</span>
+            </h2>
+          </div>
 
           <p className="text-gray-700 mb-4 text-justify text-sm sm:text-base">
             Step into a world where history and spirituality converge. This

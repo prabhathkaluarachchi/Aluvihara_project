@@ -4,7 +4,7 @@ import NavBar1 from "../component/common/NavBar1";
 import Footer from "../component/common/Footer";
 
 import HistoryImage from "../assets/images/History.jpg";
-import Hero from "../assets/images/landing/history_landing.png";
+import Hero from "../assets/images/landing/history_landing - Copy.webp";
 import tiptika from "../assets/images/tiptika.png";
 import timeline from "../assets/images/timeline.svg";
 import showmore from "../assets/images/showmore.svg";
@@ -89,7 +89,6 @@ const History: React.FC = () => {
         {/* Intro Section */}
         <section className="relative w-full h-auto lg:h-[90dvh] pb-20 px-6 p-5 md:px-20 lg:px-0 mt-10 md:mt-20 lg:mt-20">
           <div className="bg-primary hidden w-80 h-25 lg:block absolute left-0 -top-[-10px] z-0" />
-          <div className="bg-primary hidden w-80 h-25 lg:block absolute lg:left-120 lg:-bottom-[-20px] z-0" />
 
           <div className="lg:w-5/6 mx-auto h-full flex lg:flex-row flex-col">
             <div className="relative w-full lg:w-1/2 flex justify-center items-center">
@@ -124,6 +123,7 @@ const History: React.FC = () => {
               </p>
             </div>
           </div>
+          <div className="bg-primary hidden w-80 h-25 lg:block absolute lg:left-1/3 lg:-bottom-[-20px] -z-50" />
 
           <img src="" alt="" />
         </section>

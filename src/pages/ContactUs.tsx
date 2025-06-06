@@ -9,7 +9,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import NavBar1 from "../component/common/NavBar1";
 import lineart from "../assets/linearts/lineart.svg";
 import lineart2 from "../assets/linearts/lineart2.svg";
-import HeroImage from "../assets/images/landing/contact_landing.png";
+import HeroImage from "../assets/images/landing/contact_landing.webp";
 
 const ContactPage: React.FC = () => {
   //top mount
