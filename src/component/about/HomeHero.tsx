@@ -39,7 +39,7 @@ const HomeHero: React.FC = () => {
       titleSub:  "Wisdom",
       title2: "Aluvihara Rock Temple",
       description: 'Aluvihara Temple stands as a timeless spiritual beacon in the heart of Sri Lanka, carved into rock and legend. For centuries, it has welcomed pilgrims and seekers, offering a peaceful refuge and a gateway into the ancient teachings of the Buddha.',
-      link: "/palm",
+      link: "/history",
     },
     {
 
@@ -48,7 +48,7 @@ const HomeHero: React.FC = () => {
       titleSub: "of Buddha",
       title2: " Pali Canon - Tipitaka",
       description: 'Dating back to the 3rd century BCE, Aluvihara was more than a temple it was a sacred scriptorium. Protected by kings and monks alike, it served as the birthplace of Buddhist literary heritage.',
-      link: "/history",
+      link: "/palm",
     },
     {
 
