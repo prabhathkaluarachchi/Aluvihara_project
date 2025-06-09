@@ -11,7 +11,7 @@ import BlogHero from "../component/blog/BlogHero";
 import Swal from "sweetalert2";
 import BlogPageHero from "../component/blog/BlogPageHero";
 import { blogPosts } from "../component/blog/data/blogData";
-
+import img from "../assets/images/tripitaka2.jpg"
 const BlogPage = () => {
   //top mount
   useEffect(() => {
@@ -32,7 +32,7 @@ const BlogPage = () => {
     content: "Full content here...",
     author: "Sumangala Thero",
     date: "05/05/2025",
-    image: "/img/king.png",
+    image: img,
   };
 
   const handleLoadMore = () => {
