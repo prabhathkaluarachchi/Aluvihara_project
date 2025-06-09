@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import SearchBar from "../component/blog/SearchBar";
 import NavBar1 from "../component/common/NavBar1";
 import Footer from "../component/common/Footer";
-
 import BlogPost from "../component/blog/BlogPost";
 import RecentPostsSidebar from "../component/blog/RecentPostsSidebar";
 import SmallPostCard from "../component/blog/SmallPostCard";
@@ -11,6 +10,7 @@ import { BlogPostType } from "../component/blog/types";
 import BlogHero from "../component/blog/BlogHero";
 import Swal from "sweetalert2";
 import BlogPageHero from "../component/blog/BlogPageHero";
+import { blogPosts } from "../component/blog/data/blogData";
 
 const BlogPage = () => {
   //top mount
@@ -20,72 +20,20 @@ const BlogPage = () => {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [visiblePosts, setVisiblePosts] = useState(4);
+  const [visiblePosts, setVisiblePosts] = useState(6);
   const [isSearchTriggered, setIsSearchTriggered] = useState(false);
 
   // Mock data
   const featuredPost: BlogPostType = {
     id: "1",
-    title: "The Revival of Buddhism by King Walagamba",
+    title: "Aluvihare and the Sacred History of the Thripitakaya: A Legacy Carved in Stone",
     excerpt:
-      "In the last century BCE, King Walagamba stands as a symbol of resilience and devotion among Buddhist rulers, embodying the unwavering commitment to preserving the sacred traditions of the Dhamma. During a time of political upheaval and foreign invasions, he not only fought to reclaim his rightful throne but also took monumental steps to safeguard Buddhism for future generations. His most enduring legacy was the formal transcription of the oral Buddhist teachings — the Tripitaka — into written form, ensuring their survival against the tide of uncertainty. Through his efforts, Sri Lanka became a stronghold of Theravāda Buddhism, and his reign is remembered not merely for its political achievements, but for the spiritual foresight that continues to shape the island’s religious and cultural identity.",
+      "Nestled among the serene hills of Matale in Sri Lanka lies Aluvihare Rock Temple, a sacred site of profound historical and spiritual importance. While the temple itself is a testament to ancient Buddhist architecture and devotion, it holds a deeper significance in the chronicles of Buddhist heritage—it is the revered location where the Thripitakaya (or Tipitaka) was first committed to writing.",
     content: "Full content here...",
     author: "Sumangala Thero",
     date: "05/05/2025",
     image: "/img/king.png",
   };
-
-  const smallPosts: BlogPostType[] = [
-    {
-      id: "2",
-      title: "Yokohi Provident™ in Abrukhara",
-      excerpt:
-        "Based on the name used in Arabic, Abraham Temple also reminds us of the Buddhist history...",
-      content: "Full content here...",
-      author: "John Eisenriegl",
-      date: "March 2023",
-      image: "/img/king_walagamba.jpg",
-    },
-    // Add at least 4 more posts to demonstrate load more functionality
-    {
-      id: "3",
-      title: "Ancient Buddhist Manuscripts",
-      excerpt:
-        "Exploring the preservation techniques of ancient palm leaf manuscripts...",
-      content: "Full content here...",
-      author: "Sarah Johnson",
-      date: "February 2023",
-      image: "/img/king_walagamba.jpg",
-    },
-    {
-      id: "4",
-      title: "Meditation Techniques",
-      excerpt: "Traditional meditation methods practiced for centuries...",
-      content: "Full content here...",
-      author: "Michael Chen",
-      date: "January 2023",
-      image: "/img/king_walagamba.jpg",
-    },
-    {
-      id: "5",
-      title: "Temple Architecture",
-      excerpt:
-        "The symbolic meaning behind traditional Buddhist temple designs...",
-      content: "Full content here...",
-      author: "Priya Patel",
-      date: "December 2022",
-      image: "/img/king_walagamba.jpg",
-    },
-    {
-      id: "6",
-      title: "Buddhist Festivals",
-      excerpt: "Annual celebrations and their spiritual significance...",
-      content: "Full content here...",
-      author: "David Wilson",
-      date: "November 2022",
-      image: "/img/king_walagamba.jpg",
-    },
-  ];
 
   const handleLoadMore = () => {
     setIsLoading(true);
@@ -135,7 +83,7 @@ const BlogPage = () => {
     }
   };
 
-  const filteredPosts = smallPosts.filter((post) =>
+  const filteredPosts = blogPosts.filter((post) =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -165,9 +113,9 @@ const BlogPage = () => {
               <h2 className="text-xl font-semibold text-gray-700 mb-4">
                 Search Results:
               </h2>
-              {filteredPosts.length > 0 ? (
+              {blogPosts.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                  {filteredPosts.map((post) => (
+                  {blogPosts.map((post) => (
                     <div key={post.id} className="h-full">
                       <SmallPostCard post={post} />
                     </div>
@@ -180,12 +128,12 @@ const BlogPage = () => {
           ) : (
             <>
               {/* Featured and Sidebar */}
-              <div className="flex flex-col lg:flex-row gap-8 w-5/6 mx-auto">
+              <div className="flex flex-col lg:flex-row w-5/6 mx-auto gap-8">
                 <div className="lg:w-2/3">
                   <BlogPost post={featuredPost} />
                 </div>
                 <div className="lg:w-1/3">
-                  <RecentPostsSidebar posts={smallPosts.slice(0, 3)} />
+                  <RecentPostsSidebar />
                 </div>
               </div>
 
@@ -198,17 +146,19 @@ const BlogPage = () => {
                         More Articles
                       </h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {smallPosts.slice(0, visiblePosts).map((post) => (
-                          <SmallPostCard key={post.id} post={post} />
+                        {blogPosts.slice(0, visiblePosts).map((post) => (
+                          <div key={post.id}>
+                            <SmallPostCard post={post} />
+                          </div>
                         ))}
                       </div>
 
-                      {visiblePosts < smallPosts.length && (
+                      {/* {visiblePosts < blogPosts.length && (
                         <LoadMoreButton
                           onClick={handleLoadMore}
                           isLoading={isLoading}
                         />
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </div>

@@ -31,17 +31,17 @@ const BlogPost = ({ post }: BlogPostProps) => {
           <h2 className="text-3xl md:text-3xl text-[#4B4B4B] font-roboto font-[500]">
             {post.title}
           </h2>
-          <span className="text-sm text-[#70707030] mt-1 whitespace-nowrap font-roboto">
+          <span className="text-sm text-ternary mt-1 whitespace-nowrap font-roboto">
             {post.date}
           </span>
         </div>
 
-        <p className="text-[#4F4C53] text-[20px] font-medium leading-[35px] line-clamp-5 mb-6 font-roboto text-justify">
+        <p className="text-[#4F4C53] text-[18px] font-normal leading-[35px] line-clamp-3 mb-6 font-roboto text-justify">
           {post.excerpt}
         </p>
 
         <div className="flex justify-between items-center">
-          <span className="text-sm text-[#4B4B4B] font-roboto">
+          <span className="text-sm text-ternary font-roboto">
             Author: {post.author}
           </span>
           <Link

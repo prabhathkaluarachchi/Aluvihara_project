@@ -255,7 +255,7 @@ export const blogPosts: BlogPostType[] = [
         content: "",
       },
     ],
-    image: "/img/temple.jpg",
+    image: "/img/king.png",
     author: "Sumangala Thero",
     date: "20 March 2025",
     image2: "/img/king1.jpg",
