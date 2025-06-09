@@ -68,9 +68,9 @@ const App: React.FC = () => {
 
         {/* temple line art */}
         <img 
-        src="temple-lineart.svg"
+        src="/gallery/cave.png"
         alt="Temple line art"
-        className='absolute right-0 top-900 h-130 hidden lg:block' />
+        className='absolute -right-80 top-920 h-130 hidden lg:block' />
 
         {/* events section */}
         <section 

@@ -1,46 +1,32 @@
 import React, { useEffect, useState } from 'react';
+import { blogPosts } from "../blog/data/blogData";
 
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import '../../styles/blogslider.css'
 
-type Slide = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-};
-
 
 const BlogSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  //blogs
-  const slidesData: Slide[] = [
-  { id: 1, title: 'The Pali Canon', description: 'The Pali Canon, also known as the Tipitaka, is the authoritative scripture of Theravada Buddhism. It consists of three "baskets" (pitaka): the Vinaya Pitaka (monastic rules), the Sutta Pitaka (discourses of the Buddha), and the Abhidhamma Pitaka (philosophical teachings). It preserves the earliest teachings of Buddhism.', image: 'active.png' },
-  { id: 2, title: 'Slide 2', description: 'The Pali Canon, also known as the Tipitaka, is the authoritative scripture of Theravada Buddhism. It consists of three "baskets" (pitaka): the Vinaya Pitaka (monastic rules), the Sutta Pitaka (discourses of the Buddha), and the Abhidhamma Pitaka (philosophical teachings). It preserves the earliest teachings of Buddhism.', image: 'dhm.png' },
-  { id: 3, title: 'Slide 3', description: 'The Pali Canon, also known as the Tipitaka, is the authoritative scripture of Theravada Buddhism. It consists of three "baskets" (pitaka): the Vinaya Pitaka (monastic rules), the Sutta Pitaka (discourses of the Buddha), and the Abhidhamma Pitaka (philosophical teachings). It preserves the earliest teachings of Buddhism.', image: 'prg.png' },
-  { id: 4, title: 'Slide 4', description: 'The Pali Canon, also known as the Tipitaka, is the authoritative scripture of Theravada Buddhism. It consists of three "baskets" (pitaka): the Vinaya Pitaka (monastic rules), the Sutta Pitaka (discourses of the Buddha), and the Abhidhamma Pitaka (philosophical teachings). It preserves the earliest teachings of Buddhism.', image: 'dlda.png' },
-];
-
-  const getActiveSlide = () => slidesData[currentIndex % slidesData.length];
+  const getActiveSlide = () => blogPosts[currentIndex % blogPosts.length];
 
   const getSmallSlides = () => {
     const smallSlides = [];
     for (let i = 1; i < 4; i++) {
-      smallSlides.push(slidesData[(currentIndex + i) % slidesData.length]);
+      smallSlides.push(blogPosts[(currentIndex + i) % blogPosts.length]);
     }
     return smallSlides;
   };
 
   // slider controller
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % slidesData.length);
+    setCurrentIndex((prev) => (prev + 1) % blogPosts.length);
   };
 
   const prevSlide = () => {
     setCurrentIndex((prev) =>
-      (prev - 1 + slidesData.length) % slidesData.length
+      (prev - 1 + blogPosts.length) % blogPosts.length
     );
   };
 
@@ -125,8 +111,8 @@ const BlogSlider: React.FC = () => {
             />
             <div className="p-8 absolute text-white bg-gradient-to-t from-black/100 via-black/90 to-transparent bottom-0">
               <h2 className="text-2xl font-regular mb-5">{activeSlide.title}</h2>
-              <p className="text-gray-200 text-base text-justify">{activeSlide.description}</p>
-              <Link to="/blog">
+              <p className="text-gray-200 text-base text-justify">{activeSlide.excerpt}</p>
+              <Link to={`/viewblog/${activeSlide.id}`}>
                  <button
                   className="text-primary mt-3 mb-2 underline text-right w-full hover:cursor-pointer">Show more</button>
               </Link>
@@ -135,21 +121,22 @@ const BlogSlider: React.FC = () => {
 
           {/* Smaller cards */}
           <div className="flex gap-5 w-200 overflow-hidden">
-            {smallSlides.map((slide) => (
+            {smallSlides.map((post) => (
               <div
-                key={slide.id}
+                key={post.id}
                 className="w-1/3 transition-transform duration-[3000ms] ease-in-out transform translate-x-0 bg-white rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl overflow-hidden"
               >
                 <img
-                  src={slide.image}
-                  alt={slide.title}
+                  src={post.image}
+                  alt={post.title}
                   className="w-full h-50 object-cover rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl"
                 />
                 <div className="p-2 mt-5">
-                  <h3 className="text-md font-semibold">{slide.title}</h3>
+                  <h3 className="text-md font-semibold">{post.title}</h3>
                   <p className="text-[#4B4B4B] text-xs text-justify mt-3">
                     {/* word limit */}
-                    {activeSlide.description.split(" ").slice(0, 30).join(" ")}{activeSlide.description.split(" ").length > 30 && "..."}
+                    
+                    {activeSlide.excerpt.split(" ").slice(0, 30).join(" ")}{activeSlide.excerpt.split(" ").length > 30 && "..."}
                   </p>
                 </div>
               </div>
@@ -178,13 +165,13 @@ const BlogSlider: React.FC = () => {
       <div 
       className="lg:hidden hc-card-list w-full p-5 md:px-10 h-full mx-auto py-5 relative">
         <Slider {...settings}>
-          {slidesData.map((slide) => (
+          {blogPosts.map((post) => (
             <article 
             className="hc-card w-full md:px-5">
               {/* image */}
               <figure 
               className="hc-card-image w-full h-40 rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl">
-                <img src={slide.image} 
+                <img src={post.image} 
                 className="w-full h-full object-cover rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl"/>
               </figure>
 
@@ -192,12 +179,12 @@ const BlogSlider: React.FC = () => {
               <div 
               className="hc-card-header px-5 mt-5">
                 <p 
-                className="font-semibold text-xl text-secondary my-3">{slide.title}</p>
+                className="font-semibold text-xl text-secondary my-3">{post.title}</p>
 
                 <p 
-                className="text-sm lg:text-sm text-gray-400 text-justify">{slide.description}</p>
+                className="text-sm lg:text-sm text-gray-400 text-justify">{post.excerpt}</p>
 
-                <Link to="/blog">
+                <Link to={`/viewblog/${post.id}`}>
                  <button
                   className="text-primary mt-3 mb-10 underline text-right w-full">Show more</button>
                 </Link>
