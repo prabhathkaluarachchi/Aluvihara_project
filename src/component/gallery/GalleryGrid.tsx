@@ -60,7 +60,7 @@ export default function GalleryGrid() {
             <span className="text-primary block text-3xl font-medium">
               Discover
             </span>
-            <span className="text-[72px] lg:text-[96px]">Highlights</span>
+            <span className="text-[72px] lg:text-[96px] text-[#181415]">Highlights</span>
           </h2>
         </div>
       </div>

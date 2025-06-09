@@ -89,7 +89,7 @@ const BlogPage = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col overflow-x-hidden  w-full">
+      <div className="min-h-screen flex text-[#181415] flex-col overflow-x-hidden  w-full">
         <NavBar1 page="blog" />
         <BlogPageHero />
 

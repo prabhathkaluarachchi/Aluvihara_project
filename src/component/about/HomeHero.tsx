@@ -35,27 +35,27 @@ const HomeHero: React.FC = () => {
     {
 
       video: "https://videos.pexels.com/video-files/1210220/1210220-uhd_2560_1440_30fps.mp4",
-      title1: "Pali Cannon",
-      titleSub: "written on",
-      title2: "Ola(Palm) Leaves ",
-      description: 'The Pali Canon, known as the "Tipitaka," is the foundational scripture of Theravāda Buddhism, containing the teachings of the Buddha.containing the teachings of the Buddha.',
-      link: "/palm",
-    },
-    {
-
-      video: "https://videos.pexels.com/video-files/5416356/5416356-uhd_2732_1440_25fps.mp4",
-      title1: "History",
-      titleSub: "of",
-      title2: "Aluvihara  Temple",
-      description: 'The Pali Canon, known as the "Tipitaka," is the foundational scripture of Theravāda Buddhism, containing the teachings of the Buddha.containing the teachings of the Buddha.',
+      title1: "Sacred Sanctuary",
+      titleSub:  "Wisdom",
+      title2: "Aluvihara Rock Temple",
+      description: 'Aluvihara Temple stands as a timeless spiritual beacon in the heart of Sri Lanka, carved into rock and legend. For centuries, it has welcomed pilgrims and seekers, offering a peaceful refuge and a gateway into the ancient teachings of the Buddha.',
       link: "/history",
     },
     {
 
+      video: "https://videos.pexels.com/video-files/5416356/5416356-uhd_2732_1440_25fps.mp4",
+      title1: "The Words",
+      titleSub: "of Buddha",
+      title2: " Pali Canon - Tipitaka",
+      description: 'Dating back to the 3rd century BCE, Aluvihara was more than a temple it was a sacred scriptorium. Protected by kings and monks alike, it served as the birthplace of Buddhist literary heritage.',
+      link: "/palm",
+    },
+    {
+
       video: "https://videos.pexels.com/video-files/12990979/12990979-uhd_2560_1440_25fps.mp4",
-      title1: "Historical",
-      titleSub: "hidden",
-      title2: "Rock Cave Temple",
+      title1: "A Cradle",
+      titleSub: "of",
+      title2: "Buddhist Literature",
       description: 'The Pali Canon, known as the "Tipitaka," is the foundational scripture of Theravāda Buddhism, containing the teachings of the Buddha.containing the teachings of the Buddha.',
       link: "/gallery",
     },
@@ -131,7 +131,7 @@ const HomeHero: React.FC = () => {
                 </h1>
 
                 <p
-                  className="lg:text-xl text-gray-200 lg:font-regular lg:leading-tight lg:text-left  lg:pr-1 text-sm text-center font-regular lg:font-bold leading-tight">
+                  className="lg:text-[36px] text-gray-200 lg:font-regular lg:leading-tight lg:text-left  lg:pr-1 text-sm text-center font-regular lg:font-bold leading-tight">
                   {slides[current].titleSub}
                 </p>
               </div>

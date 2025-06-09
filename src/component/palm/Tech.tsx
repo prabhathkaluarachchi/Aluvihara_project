@@ -34,7 +34,7 @@ const PalmLeafSection: React.FC = () => {
             <span className="text-primary block text-3xl font-medium">
               Ola(Palm)
             </span>
-            <span className="text-[72px] lg:text-[96px]">Technology</span>
+            <span className="text-[72px] lg:text-[96px] text-[#181415]">Technology</span>
           </h2>
 
           <div className="absolute lg:top-[-30px] left-[-70px] w-[570px] h-[320px] border-4 border-[#DADADA]/40 z-[-40] hidden lg:block" />

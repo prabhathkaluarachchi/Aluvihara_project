@@ -43,7 +43,7 @@ const BlockMap: React.FC<MapProps> = ({onClose}) => {
             <Link to="/">
             <div
             onClick={onClose}
-            className="absolute z-222 bg-white top-2 right-50 w-10 h-10 flex items-center justify-center rounded-full shadow-md group">
+            className="absolute z-222 bg-white top-70 lg:top-2 right-90 w-10 h-10 flex items-center justify-center rounded-full shadow-md group">
                <RxCross2 
                className="text-gray-400 group-hover:text-primary group-hover:cursor-pointer"/>
             </div>

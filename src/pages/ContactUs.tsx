@@ -75,7 +75,7 @@ const ContactPage: React.FC = () => {
             <div className="w-full lg:w-3/5">
               <h2 className="flex flex-col text-ternary/50 text-center lg:text-left text-base">
                 If you have questions,
-                <span className="text-[46px] text-black">
+                <span className="text-[46px] text-[#181415]">
                   Feel Free To Contact Us
                 </span>
               </h2>

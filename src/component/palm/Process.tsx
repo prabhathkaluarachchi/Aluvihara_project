@@ -213,7 +213,7 @@ const Process = () => {
             <span className="text-primary block text-3xl font-medium">
               Steps of
             </span>
-            <span className="text-[72px] lg:text-[96px]">Process</span>
+            <span className="text-[72px] lg:text-[96px] text-[#181415]">Process</span>
           </h2>
         </div>
         <div className="relative justify-center z-10 max-w-6xl px-4 flex flex-col lg:ml-56">
