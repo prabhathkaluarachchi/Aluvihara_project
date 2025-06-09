@@ -146,7 +146,7 @@ const BlogPage = () => {
                         More Articles
                       </h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {blogPosts.slice(0, visiblePosts).map((post) => (
+                        {blogPosts.slice(0, 4).map((post) => (
                           <div key={post.id}>
                             <SmallPostCard post={post} />
                           </div>
@@ -164,7 +164,7 @@ const BlogPage = () => {
                 </div>
 
                 {/* Buddhist Art Image - right aligned, smaller, scrolls with content */}
-                <div className="absolute top-0 right-0 w-[600px] hidden sm:block pointer-events-none">
+                <div className="absolute lg:-top-40 -top-20 right-0 w-[500px] hidden sm:block pointer-events-none">
                   <img
                     src="/img/test.png"
                     alt="Buddhist Art"
