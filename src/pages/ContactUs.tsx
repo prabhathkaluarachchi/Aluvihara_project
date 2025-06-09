@@ -9,7 +9,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import NavBar1 from "../component/common/NavBar1";
 import lineart from "../assets/linearts/lineart.svg";
 import lineart2 from "../assets/linearts/lineart2.svg";
-import HeroImage from "../assets/images/landing/contact_landing.webp";
+import HeroImage from "../assets/images/landing/contact.webp";
 
 const ContactPage: React.FC = () => {
   //top mount
@@ -53,7 +53,7 @@ const ContactPage: React.FC = () => {
           <img
             src={HeroImage}
             alt="Aluvihara Rock Temple"
-            className="absolute top-0 left-0 w-full h-full object-cover object-top z-0"
+            className="absolute top-0 left-0 w-full h-full object-cover object-bottom z-0"
           />
           <div className="w-full pr-4 relative z-10">
             <div className="lg:w-[800px] md:max-w-[90%] md:mr-auto">

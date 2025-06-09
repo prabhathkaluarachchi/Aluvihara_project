@@ -1,18 +1,25 @@
 import React from "react";
+import blogimg from "../../assets/images/landing/blog.webp";
 
 const BlogPageHero = () => {
   return (
     <div className="relative h-[50dvh] min-h-[500px] md:min-h-[600px] flex items-center">
       {/* Background Image with Overlay */}
-      <div
+      {/* <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: "url(img/header.png)",
+          backgroundImage: ,
           backgroundPosition: "center 25%",
         }}
       >
+         
         <div className="absolute inset-0 bg-black/10"></div>
-      </div>
+      </div> */}
+      <img
+        src={blogimg}
+        alt="Aluvihara Rock Temple"
+        className="absolute top-0 left-0 w-full h-full z-0 object-cover"
+      />
 
       {/* Hero Content */}
       <div className="w-full pr-4 relative z-10">
@@ -30,4 +37,3 @@ const BlogPageHero = () => {
 };
 
 export default BlogPageHero;
-
