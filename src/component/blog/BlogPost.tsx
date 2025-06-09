@@ -27,8 +27,8 @@ const BlogPost = ({ post }: BlogPostProps) => {
 
       {/* Content */}
       <div className="p-6">
-        <div className="flex justify-between items-start mb-2">
-          <h2 className="text-3xl md:text-3xl text-[#4B4B4B] font-roboto font-[500]">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-2">
+          <h2 className="text-2xl md:text-3xl text-[#4B4B4B] font-roboto font-[500]">
             {post.title}
           </h2>
           <span className="text-sm text-ternary mt-1 whitespace-nowrap font-roboto">
