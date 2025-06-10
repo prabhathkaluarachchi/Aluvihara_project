@@ -73,7 +73,7 @@ const BlockMap: React.FC<MapProps> = ({onClose}) => {
                 </section>
                 
                 <div
-                className="h-11/12 rounded-bl-lg rounded-br-lg p-3 overflow-hidden">
+                className="h-11/12 rounded-bl-lg rounded-br-lg p-3 overflow-scroll">
                     <img 
                     src={imageUrl}
                     alt="Aluvihara temple location map"
