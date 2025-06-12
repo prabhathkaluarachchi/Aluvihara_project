@@ -4,7 +4,7 @@ export const sliderData: SlideData[] = [
   {
     id: 1,
     title: '"Aloka" Perahera',
-    description: 'Aloka Perahera is a vibrant annual Buddhist festival in Sri Lanka, featuring illuminated night processions with traditional drummers, Kandyan dancers, and colorfully decorated elephants. Celebrated in historic temple cities, it reflects centuries old cultural and religious traditions, attracting both local devotees and international visitors.',
+    description: 'Aloka Perahera is a vibrant annual Buddhist festival in Sri Lanka, featuring illuminated night processions with traditional drummers, Kandyan dancers, and colorfully decorated elephants. Celebrated in historic temple cities, it reflects centuries old cultural and religious traditions, attracting visitors.',
     image: 'event.png'
   },
   {
