@@ -119,14 +119,14 @@ const HomeHero: React.FC = () => {
           className="md:absolute w-full mx-auto md:z-30 md:inset-0 md:flex md:items-start md:py-0 absolute z-30 inset-0 flex flex-col items-center md:px-10">
 
           <div
-            className="w-full md:w-7/12 bg-black/60 h-full md:pl-10 lg:pl-30 lg:pt-30 pt-20">
+            className="w-full md:w-7/12 lg:w-2/3 bg-black/60 h-full md:pl-10 lg:pl-30 lg:pt-30 pt-20">
             <div
               className="lg:text-white md:pt-25 md:w-full md:flex md:flex-col md:justify-center md:h-4/5 md:space-y-10 md:w-4/5 text-white pt-20 full flex flex-col justify-center h-4/5 space-y-10 items-center md:items-start p-5 md:p-0">
 
               <div
-                className="flex flex-col md:flex-row md:items-baseline gap-2 lg:gap-5">
+                className="flex lg:w-full flex-col md:flex-row md:items-baseline gap-2 lg:gap-5">
                 <h1
-                  className="lg:text-[60px] lg:font-bold lg:leading-tight lg:text-left  lg:pr-1 text-[30px] text-center font-bold leading-tight">
+                  className="lg:text-[60px] lg:w-auto lg:font-bold lg:leading-tight lg:text-left  lg:pr-1 text-[30px] text-center font-bold leading-tight">
                   {slides[current].title1}
                 </h1>
 
@@ -148,10 +148,10 @@ const HomeHero: React.FC = () => {
 
               {/* CTA Buttons */}
               <div
-                className="lg:flex lg:justify-start lg:flex-wrap lg:gap-4 lg:mt-2 flex justify-center items-center gap-4 mt-[-20px] lg:mt-2">
+                className="lg:flex lg:justify-start lg:flex-wrap lg:gap-4 lg:mt-0 flex justify-center items-center gap-4 mt-[-20px] lg:mt-2">
                 <Link to={slides[current].link}>
                   <button
-                    className="flex text-xs border-2 border-primary lg:text-base text-primary bg-transparent px-4 py-2 rounded-[10px] items-center justify-center gap-2 my-8 lg:mt-2 hover:text-secondary hover:bg-primary hover:cursor-pointer">
+                    className="flex text-xs border-2 border-primary lg:text-base text-primary bg-transparent px-4 py-2 rounded-[10px] items-center justify-center gap-2 my-8 lg:mt-0 hover:text-secondary hover:bg-primary hover:cursor-pointer">
                     <span>More Details</span>
                     <IoIosSend className="text-base lg:text-xl" />
                   </button>

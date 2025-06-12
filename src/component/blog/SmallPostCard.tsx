@@ -25,12 +25,16 @@ const SmallPostCard = ({ post }: Props) => {
 
         <div className="mt-auto pt-4">
           <div className="flex justify-between items-center">
-            <Link to={`/viewblog/${post.id}`}>
-              <button className="text-[#EBB23E] text-sm hover:text-[#4B4B4B] font-medium">
-                Read More →
-              </button>
+            <Link
+              to={`/viewblog/${post.id}`}
+              className="text-[#EBB23E] text-sm hover:text-[#4B4B4B] font-medium cursor-pointer"
+            >
+              Read More →
             </Link>
-            <span className="text-xs text-[#4B4B4B]">Author: {post.author}</span>
+
+            <span className="text-xs text-[#4B4B4B]">
+              Author: {post.author}
+            </span>
           </div>
         </div>
       </div>
