@@ -68,7 +68,7 @@ const HistorySection: React.FC = () => {
 
           <div className="flex flex-col gap-6 pl-5 pr-5 text-[#4F4C53]">
             <h2 className="hidden lg:block text-[10px] flex flex-col sm:text-[18px] md:text-[28px]text-[#181615] leading-snug">
-              Unveiling The Rich History Of{" "}
+              Unveiling The Rich History of{" "}
               <span className="text-[#EBB23E] hidden lg:block">Aluvihara,</span>
             </h2>
             <p className="text-[15px] sm:text-[16px] md:text-[18px] text-justify leading-relaxed">
