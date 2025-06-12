@@ -16,6 +16,12 @@ export interface BlogPostType {
 }
 import img from "../../../assets/images/tripitaka2.jpg";
 import img2 from "../../../assets/images/tripitaka.jpg";
+import img3 from "../../../assets/images/landing/history_landing.webp";
+import img4 from "../../../assets/images/img10.jpg";
+import img5 from "../../../assets/images/rock.jpg";
+import img6 from "../../../assets/images/img9.png";
+import img7 from "../../../assets/images/ContactNav.jpg";
+import img8 from "../../../assets/images/img11.png";
 
 export const blogPosts: BlogPostType[] = [
   {
@@ -124,14 +130,19 @@ export const blogPosts: BlogPostType[] = [
       {
         _id: "p2",
         content:
-          "Aluvihare Rock Temple, also known as Aluvihare Purana Viharaya, dates back to the reign of King Devanampiyatissa in the 3rd century BCE. However, it rose to historical prominence during the 1st century BCE under King Valagamba. Faced with the threat of losing the oral Buddhist teachings during foreign invasions, the king and the monastic community chose Aluvihare as the sacred site to write down the Tripitaka (Buddhist scriptures) for the first time. This monumental act preserved the heart of Theravāda Buddhism and changed the course of religious history.",
+          "Aluvihare Rock Temple, also known as Aluvihare Purana Viharaya, dates back to the reign of King Devanampiyatissa in the 3rd century BCE. However, it rose to historical prominence during the 1st century BCE under King Valagamba. Faced with the threat of losing the oral Buddhist teachings during foreign invasions, the king and the monastic community chose Aluvihare as the sacred site to write down the Tripitaka (Buddhist scriptures) for the first time.",
+      },
+      {
+        _id: "p2c",
+        content:
+          "This monumental act preserved the heart of Theravāda Buddhism and changed the course of religious history.",
       },
       {
         _id: "p3h",
         content: "More Than Just a Temple",
       },
       {
-        _id: "p3",
+        _id: "p3b",
         content:
           "What makes Aluvihare truly unique among the temples in Sri Lanka is its blend of spirituality and scholarship. As you explore its cave temples, you’ll encounter ancient murals, inscriptions on rock, and statues of the Buddha, each telling stories from centuries past. The natural rock formations of the temple, combined with the tranquil surroundings, provide a meditative atmosphere for pilgrims and tourists alike.",
       },
@@ -163,72 +174,136 @@ export const blogPosts: BlogPostType[] = [
           "If you’re exploring the cultural triangle of Sri Lanka, make sure to include Mathale Aluvihare on your itinerary. Whether you come seeking spiritual insight, historical knowledge, or peaceful contemplation, Aluvihare welcomes all with open arms. Aluvihare Rock Temple is not just a monument—it's a guardian of tradition and a beacon among the temples of Sri Lanka.",
       },
     ],
-    image: "/img/temple2.jpg",
+    image: img3,
     author: "Sumangala Thero",
     date: "2 June 2025",
-    image2: "/img/king1.jpg",
+    image2: img4,
   },
   {
     id: "3",
-    title: "A Sacred Journey: The History of Aluvihara Temple",
+    title:
+      "Discover the Cave Wisdom of Aluvihare: Where History and Spirituality Unite",
     excerpt: "Explore the sacred legacy of Aluvihara...",
     content: [
       {
         _id: "p1",
         content:
-          "In the 1st century BCE, King Walagamba’s efforts to revive Buddhism played a crucial role in preserving the sacred Tipitaka. After regaining his throne from foreign invaders, the king commissioned the writing of the Buddhist scriptures on palm leaves at Aluvihara Temple, ensuring the survival of Buddhist teachings for future generations. This blog delves into his struggles and contributions to Sri Lankan Buddhism.",
+          "The Aluvihare Rock Temple in Mathale stands as a sacred fusion of nature, history, and faith. Unlike many modern temples, this ancient site preserves the true essence of Buddhist heritage hidden in its temple caves and etched into Ola Leaf manuscripts",
+      },
+      {
+        _id: "p2h",
+        content: "Aluvihare Cave Temples: A Sanctuary of Silence and Knowledge",
       },
       {
         _id: "p2",
         content:
-          "King Walagamba’s monumental contribution came in the form of commissioning the transcription of the sacred Tipitaka onto palm leaves. This painstaking endeavor ensured that the oral traditions of Buddhism were safeguarded for future generations. Aluvihara Temple became the epicenter of this effort, serving as a sanctuary where monks meticulously documented these scriptures. It was a spiritual renaissance born out of the king’s vision and dedication.",
+          "Within the natural stone formations of Aluvihare, monks of old found the perfect refuge to commit the Buddha's teachings to writing. These cave temples became the silent guardians of the Thiripitaka, where each Ola Leaf held the promise of preserving the Dhamma in times of chaos.",
+      },
+      {
+        _id: "p2c",
+        content:
+          "The result was more than scripture it was a cultural revolution. The act of recording the Tripitaka made Aluvihare Rock Temple a cornerstone among Sri Lanka Buddhist temples.",
+      },
+      {
+        _id: "p3h",
+        content: "Why This Temple Still Matters",
       },
       {
         _id: "p3",
         content:
-          "The king’s legacy reverberates through Sri Lanka’s religious and cultural heritage. His initiatives not only preserved Buddhist wisdom but also strengthened the nation’s identity. Aluvihara Temple stands as a testament to his commitment, inspiring admiration for his role in shaping history. King Walagamba’s contributions remain a shining example of leadership and devotion, bridging the past with the future of Buddhism.King Walagamba's revival efforts also emphasized the importance of nurturing monastic education and practice.",
+          "Today, the Aluvihare Rock Temple history and significance continue to inspire. As one of the oldest religious sites of Mathale, it offers a rare look at ancient ola leaf manuscripts, wall paintings, and the very caves used over 2,000 years ago.",
       },
       {
         _id: "p4",
         content:
-          "He fostered an environment where Buddhist monks could study, meditate, and teach the Dharma with renewed vigor. By supporting monastic communities and establishing infrastructure for their growth, the king ensured that Buddhism not only survived but thrived in Sri Lanka. His reign symbolizes resilience and devotion, laying the foundation for the preservation and enrichment of Buddhist culture for centuries to come.",
+          "Whether you're a spiritual seeker, a student of history, or a traveler in search of deeper meaning, Aluvihare provides an unforgettable journey into Buddhist legacy.",
+      },
+      {
+        _id: "p5h",
+        content: "Visit Aluvihare Rock Temple in Matale ",
+      },
+      {
+        _id: "p5",
+        content:
+          "This isn't just a tourist stop it's a sacred Buddhist site. If you're wondering where to get ola leafs or simply wish to understand the profound importance of Tipitaka History, Aluvihare Rock Temple is the place to begin",
       },
     ],
-    image: "/img/temple.jpg",
+    image: img5,
     author: "Sumangala Thero",
-    date: "20 March 2025",
-    image2: "/img/king1.jpg",
+    date: "11 June 2025",
+    image2: img6,
   },
   {
     id: "4",
-    title: "A Sacred Journey: The History of Aluvihara Temple",
+    title:
+      "Walking with the Ancients: Exploring the Timeless Spirit of Aluvihare Rock Temple",
     excerpt: "Explore the sacred legacy of Aluvihara...",
     content: [
       {
         _id: "p1",
         content:
-          "In the 1st century BCE, King Walagamba’s efforts to revive Buddhism played a crucial role in preserving the sacred Tipitaka. After regaining his throne from foreign invaders, the king commissioned the writing of the Buddhist scriptures on palm leaves at Aluvihara Temple, ensuring the survival of Buddhist teachings for future generations. This blog delves into his struggles and contributions to Sri Lankan Buddhism.",
+          "High above the bustling streets of Matale, the Aluvihare Rock Temple rises in quiet dignity a silent sentinel of Sri Lanka’s spiritual and cultural story. Known across the island as one of the most revered Sri Lanka Buddhist temples, this sacred site offers more than scenic beauty or ancient artifacts; it offers a chance to walk the very paths where the Buddha’s words were preserved for eternity",
+      },
+      {
+        _id: "p2h",
+        content: "Aluvihare: The Spiritual Heart of Matale",
       },
       {
         _id: "p2",
         content:
-          "King Walagamba’s monumental contribution came in the form of commissioning the transcription of the sacred Tipitaka onto palm leaves. This painstaking endeavor ensured that the oral traditions of Buddhism were safeguarded for future generations. Aluvihara Temple became the epicenter of this effort, serving as a sanctuary where monks meticulously documented these scriptures. It was a spiritual renaissance born out of the king’s vision and dedication.",
+          "The town of Matale Aluvihare is more than a stop on the map. It is a destination for reflection, reverence, and reconnection. Here, nestled within rocky hills and lush forest, lies a cultural heritage site in Matale that holds the spirit of the Thiripitaka (also known as Tripitaka or Tipitaka) in every stone and scroll.",
       },
       {
-        _id: "p3",
+        _id: "p2c",
         content:
-          "The king’s legacy reverberates through Sri Lanka’s religious and cultural heritage. His initiatives not only preserved Buddhist wisdom but also strengthened the nation’s identity. Aluvihara Temple stands as a testament to his commitment, inspiring admiration for his role in shaping history. King Walagamba’s contributions remain a shining example of leadership and devotion, bridging the past with the future of Buddhism.King Walagamba's revival efforts also emphasized the importance of nurturing monastic education and practice.",
+          "Visitors to Aluvihare are greeted by serene cave temples, intricate Buddhist murals, and relics that date back over 2,000 years. These are not merely decorations they are part of a living narrative, one that connects modern travelers to the ancient monks who once etched the Dhamma onto Ola Leaf manuscripts.",
+      },
+      // {
+      //   _id: "p3h",
+      //   content: "The Turning Point at Aluvihare",
+      // },
+      // {
+      //   _id: "p3",
+      //   content:
+      //     "The Aluvihare Rock Temple is etched into Buddhist history due to a pivotal event in the 1st century BCE. During the reign of King Walagamba, Sri Lanka faced political unrest and famine. Realizing the fragility of oral tradition amid such chaos, the king sought to preserve the Dhamma in a more permanent form.",
+      // },
+      {
+        _id: "p3h",
+        content: "Where the Words Became Eternal",
+      },
+      {
+        _id: "p4a",
+        content:
+          "In the 1st century BCE, at a time when the Dhamma was at risk of being lost, the monks of Aluvihare supported by King Valagamba undertook a mission of profound significance. Using palm leaves as parchment and ancient tools as pens, they transcribed the entire Thiripitaka. This effort transformed Aluvihare Rock Temple into one of the most important religious sites of Mathale, safeguarding Buddhist wisdom for future generations.",
       },
       {
         _id: "p4",
         content:
-          "He fostered an environment where Buddhist monks could study, meditate, and teach the Dharma with renewed vigor. By supporting monastic communities and establishing infrastructure for their growth, the king ensured that Buddhism not only survived but thrived in Sri Lanka. His reign symbolizes resilience and devotion, laying the foundation for the preservation and enrichment of Buddhist culture for centuries to come.",
+          "Today, echoes of that effort remain. Reproductions of the original Ola Leaf manuscripts are still housed within the temple, offering a glimpse into a sacred literary legacy",
+      },
+      {
+        _id: "p5h",
+        content: "More Than History A Living Experience",
+      },
+      {
+        _id: "p5",
+        content:
+          "Unlike many temples in Sri Lanka, Aluvihare is not only a monument of the past. It remains an active space for meditation, learning, and pilgrimage. From monks studying ancient texts to locals seeking blessings, the temple pulses with spiritual energy. If you're seeking an immersive experience among the religious sites of the Kandy district, Aluvihare offers a rare combination: historical depth and present-day devotion.",
+      },
+      {
+        _id: "p6h",
+        content: "Plan Your Pilgrimage",
+      },
+      {
+        _id: "p6",
+        content:
+          "Whether you are a pilgrim tracing the path of the Enlightened One, a historian exploring Tipitaka History, or simply a traveler searching for meaning, Aluvihare Rock Temple in Matale is a destination that rewards both the curious and the faithful. Walk through the same Aluvihare cave temple where sacred teachings were once whispered and carved. Feel the cool stone beneath your feet and listen closely—you might just hear the past calling.",
       },
     ],
-    image: "/img/king.jpg",
+    image: img7,
     author: "Sumangala Thero",
-    date: "20 March 2025",
-    image2: "/img/king1.jpg",
+    date: "11 June 2025",
+    image2: img8,
   },
   // {
   //   id: "5",

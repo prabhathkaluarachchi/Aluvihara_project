@@ -31,7 +31,9 @@ export default function TimelessHeritage() {
                 <span className="text-primary block text-3xl font-medium">
                   Timeless
                 </span>
-                <span className="text-[72px] lg:text-[96px] text-[#181415]">Heritage</span>
+                <span className="text-[72px] lg:text-[96px] text-[#181415]">
+                  Heritage
+                </span>
               </h2>
               <p className="text-gray-700 mb-4 text-justify text-[18px]">
                 Step into a world where history and spirituality converge. This
@@ -39,7 +41,7 @@ export default function TimelessHeritage() {
                 statues, and magnificent temples that stand as timeless
                 testaments to cultural and architectural brilliance.
               </p>
-              <p className="text-gray-700 text-justify text-base">
+              <p className="text-gray-700 mb-4 text-justify text-[18px]">
                 Each statue, a masterpiece in its own right, reflects the skill
                 and devotion of artisans who brought life to their creations.
                 The temples, with their towering facades and detailed carvings,
@@ -72,7 +74,9 @@ export default function TimelessHeritage() {
               <span className="text-primary block text-3xl font-medium">
                 Timeless
               </span>
-              <span className="text-[72px] lg:text-[96px] text-[#181415]">Heritage</span>
+              <span className="text-[72px] lg:text-[96px] text-[#181415]">
+                Heritage
+              </span>
             </h2>
           </div>
 

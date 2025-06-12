@@ -25,6 +25,8 @@ const ViewBlogPost: React.FC = () => {
   const p2bc3 = blog?.content.find((p) => p._id === "p2bc3");
   const p2c = blog?.content.find((p) => p._id === "p2c");
   const p3 = blog?.content.find((p) => p._id === "p3");
+  const p3b = blog?.content.find((p) => p._id === "p3b");
+  const p4a = blog?.content.find((p) => p._id === "p4a");
   const p4 = blog?.content.find((p) => p._id === "p4");
   const p5 = blog?.content.find((p) => p._id === "p5");
   const p6 = blog?.content.find((p) => p._id === "p6");
@@ -114,16 +116,24 @@ const ViewBlogPost: React.FC = () => {
                     />
                   </div>
                 </div>
+                {p3b && (
+                  <div className="md:col-span-3">
+                    <p>{p3b.content}</p>
+                  </div>
+                )}
                 {p4h && (
                   <h6 className="font-medium md:col-span-3">{p4h.content}</h6>
                 )}
                 {p4 && (
                   <div className="md:col-span-3">
+                    {p4a && <p className="mb-2">{p4a.content}</p>}
                     <p>{p4.content}</p>
                   </div>
                 )}
                 {p5h && (
-                  <h6 className="font-medium leading-2">{p5h.content}</h6>
+                  <h6 className="font-medium leading-2 md:col-span-3">
+                    {p5h.content}
+                  </h6>
                 )}
                 {p5 && (
                   <div className="md:col-span-3">
@@ -131,7 +141,9 @@ const ViewBlogPost: React.FC = () => {
                   </div>
                 )}
                 {p6h && (
-                  <h6 className="font-medium leading-2">{p6h.content}</h6>
+                  <h6 className="font-medium leading-2 md:col-span-3">
+                    {p6h.content}
+                  </h6>
                 )}
                 {p6 && (
                   <div className="md:col-span-3">
