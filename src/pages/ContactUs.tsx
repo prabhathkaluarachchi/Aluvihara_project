@@ -60,7 +60,7 @@ const ContactPage: React.FC = () => {
               <div className="bg-black/70 p-6 rounded-md md:rounded-r-[10px]">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-2 pl-0 md:pl-14 font-roboto leading-[1.5] md:leading-[1.5] lg:leading-[1.3] text-center md:text-left">
                   <span className="text-primary block">Reach</span>
-                  <span className="text-white">Out To Us</span>
+                  <span className="text-white">Out to Us</span>
                 </h1>
               </div>
             </div>
