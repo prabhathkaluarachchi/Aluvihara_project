@@ -60,12 +60,18 @@ const App: React.FC = () => {
         </section>
 
         {/* temple line art */}
-<img
-  src="/gallery/cavenew.png"
-  alt="Temple line art"
-  className="absolute top-920 z-500 -right-0 hidden lg:block w-2xl object-fill pointer-events-none"
-/>
 
+        {/* <img
+          src="/gallery/cavenew.png"
+          alt="Temple line art"
+          className="absolute top-920 z-[-1] -right-0 hidden lg:block w-2xl object-fill pointer-events-none"
+        /> */}
+
+        <img
+          src="/gallery/cavenew.png"
+          alt="Temple line art"
+          className="absolute top-905 -right-0 hidden lg:block w-2xl object-fill pointer-events-none"
+        />
 
         {/* <img 
         src="/gallery/cave.png"

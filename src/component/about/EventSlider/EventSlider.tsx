@@ -55,7 +55,7 @@ const EventSlider: React.FC<EventSliderProps> = ({
     >
       <div className="grid grid-cols-1 md:grid-cols-2 h-full">
         {/* Content Section */}
-        <div className="order-2 md:order-1 bg-transparent mt[-500px] md:mt-15 bg-red-300 p-2">
+        <div className="order-2 md:order-1 bg-transparent mt[-500px] md:mt-15  p-2">
           <div className="h-full relative">
             {slides.map((slide, index) => (
               <div 
