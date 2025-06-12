@@ -17,7 +17,7 @@ const PalmLeavesProcess: React.FC = () => {
         className="w-full lg:w-5/6 mx-auto h-full flex flex-col lg:flex-row">
             {/* description */}
             <div
-            className="w-full lg:w-6/10 px-5 lg:px-0 lg:pt-20 lg:pr-20">
+            className="w-full lg:w-6/10 px-5 lg:px-0 lg:pt-10 lg:pr-20">
                 <h1
                 className="felx flex-col">
                     <p 
