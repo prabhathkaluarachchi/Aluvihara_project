@@ -33,7 +33,7 @@ const PalmLeavesProcess: React.FC = () => {
 
                 <Link to="/palm">
                     <button
-                    className="flex text-xs lg:text-base text-primary bg-secondary px-4 py-2 rounded-[10px] items-center justify-center gap-2 my-8 lg:mt-20 hover:text-primary/[0.8] hover:bg-secondary/[0.8] hover:cursor-pointer">
+                    className="flex text-xs lg:text-base text-primary bg-secondary px-4 py-2 rounded-[10px] items-center justify-center gap-2 my-8 lg:mt-9 hover:text-primary/[0.8] hover:bg-secondary/[0.8] hover:cursor-pointer">
                         <span>More Details</span>
                         <IoIosSend className="text-base lg:text-xl"/>
                     </button>
