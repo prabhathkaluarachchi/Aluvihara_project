@@ -3,7 +3,7 @@ import { blogPosts } from "../../component/blog/data/blogData";
 
 const MostPopular = () => {
   return (
-    <div className="lg:max-w-7xl mx-auto px-4 lg:px-4 relative mt-20 md:mt-30">
+    <div className="lg:max-w-7xl mx-auto px-4 lg:px-4 relative mt-20 md:mt-30 pb-4">
       <h2 className="text-xl font-semibold text-[#4B4B4B]/60 mb-4">
         Most Popular
       </h2>
