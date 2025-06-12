@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 import { FiDownload } from "react-icons/fi";
@@ -34,6 +34,34 @@ const BlockMap: React.FC<MapProps> = ({onClose}) => {
   const zoomOut = () => {
     setScale((prev) => Math.max(prev - 0.2, 0.5)); // min zoom 0.5x
   };
+
+  //drag option
+ const imgRef = useRef<HTMLImageElement | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [start, setStart] = useState({ x: 0, y: 0 });
+
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [zoom] = useState(2);
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLImageElement>) => {
+    setIsDragging(true);
+    setStart({
+      x: e.clientX - position.x,
+      y: e.clientY - position.y,
+    });
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    setPosition({
+      x: e.clientX - start.x,
+      y: e.clientY - start.y,
+    });
+  };
+
+  const handleMouseUp = () => setIsDragging(false);
+
 
   return (
     <>
@@ -73,12 +101,21 @@ const BlockMap: React.FC<MapProps> = ({onClose}) => {
                 </section>
                 
                 <div
-                className="h-11/12 rounded-bl-lg rounded-br-lg p-3 overflow-scroll">
+                className="h-11/12 rounded-bl-lg rounded-br-lg p-3 overflow-scroll"
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onMouseLeave={handleMouseUp}
+                    style={{ cursor: isDragging ? 'grabbing' : 'auto' }}>
                     <img 
                     src={imageUrl}
+                    ref={imgRef}
                     alt="Aluvihara temple location map"
-                    style={{ transform: `scale(${scale})`, transition: "transform 0.3s ease" }}
-                    className="h-full w-full rounded-bl-lg rounded-br-lg" />
+                    onMouseDown={handleMouseDown}
+                    className={`h-full w-full rounded-bl-lg rounded-br-lg cursor-${isDragging ? 'grabbing' : 'grab'} transition-transform`}
+                    style={{
+                    cursor: isDragging ? 'grabbing' : 'grab',
+                    transform: `scale(${zoom}) translate(${position.x}px, ${position.y}px)`,
+                    }}/>
                 </div>
             </section>
         </section>
