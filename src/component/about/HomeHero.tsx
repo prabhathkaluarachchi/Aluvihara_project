@@ -57,7 +57,7 @@ const HomeHero: React.FC = () => {
       titleSub: "of",
       title2: "Buddhist Literature",
       description: 'The Pali Canon, known as the "Tipitaka," is the foundational scripture of Theravāda Buddhism, containing the teachings of the Buddha.containing the teachings of the Buddha.',
-      link: "/gallery",
+      link: "/viewblog/1",
     },
 
   ];

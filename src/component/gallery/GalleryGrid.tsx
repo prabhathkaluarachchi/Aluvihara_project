@@ -5,7 +5,7 @@ const allImages = [
   { src: "/gallery/img19.png", desc: "Aluvihara Temple" },
   { src: "/gallery/img2.jpg", desc: "Stone Buddha statue" },
   { src: "/gallery/img3.png", desc: "Buddha carved in rock" },
-  { src: "/gallery/img4.png", desc: "Old vintage car on street." },
+  { src: "/gallery/img4.png", desc: "Worship Loard Buddha" },
   { src: "/gallery/img5.png", desc: "Temple bell hanging" },
   { src: "/gallery/img6.png", desc: "Golden Buddha statue" },
   { src: "/gallery/img7.png", desc: "Buddha with murals" },
