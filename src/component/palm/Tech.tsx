@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import Flower from "../../assets/linearts/flowerLineArt.png";
 import { Pause, Play } from "lucide-react";
+import TripitakaVideo from '../../assets/videos/tripitaka_video.mp4'
+
 const PalmLeafSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -80,7 +82,7 @@ const PalmLeafSection: React.FC = () => {
                 className="h-full w-full rounded-md z-0"
               >
                 <source
-                  src="https://videos.pexels.com/video-files/5592655/5592655-sd_640_360_30fps.mp4"
+                  src={TripitakaVideo}
                   type="video/mp4"
                 />
                 Your browser does not support the video tag
