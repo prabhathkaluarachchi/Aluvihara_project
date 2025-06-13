@@ -8,7 +8,7 @@ import TestVideo from '../../assets/videos/test.mp4'
 import TempleMap from '../../assets/images/location-map.png'
 import { TbFileSearch } from "react-icons/tb";
 import '../../index.css'
-import HeroVideo1 from '../../assets/videos/aluvihara_video.mp4'
+import HeroVideo1 from '../../assets/videos/aluvihara-video-1.mp4'
 
 
 type Slide = {
@@ -47,7 +47,7 @@ const HomeHero: React.FC = () => {
       video: "https://videos.pexels.com/video-files/5416356/5416356-uhd_2732_1440_25fps.mp4",
       title1: "The Words",
       titleSub: "of Buddha",
-      title2: " Pali Canon - Tipitaka",
+      title2: " Pali Canon (Tipitaka)",
       description: 'Dating back to the 3rd century BCE, Aluvihara was more than a temple it was a sacred scriptorium. Protected by kings and monks alike, it served as the birthplace of Buddhist literary heritage.',
       link: "/palm",
     },
@@ -67,7 +67,7 @@ const HomeHero: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 8000);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
