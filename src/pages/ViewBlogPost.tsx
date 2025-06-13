@@ -61,11 +61,11 @@ const ViewBlogPost: React.FC = () => {
           <div className="relative mt-20 md:mt-30">
             <div className="absolute bg-[#F7F6F6] h-full w-full lg:w-8/12 mt-18 z-0 -left-24"></div>
             <div className="max-w-7xl mx-auto px-7 lg:px-4 ">
-              <div className="mb-8 font-semibold relative z-20">
-                <h1 className="text-2xl mb-2 text-[#181415]">
+              <div className="mb-8 font-semibold relative z-20 ">
+                <h1 className="text-2xl mb-2 text-transparent">
                   Author: {blog.author}
                 </h1>
-                <p className="text-md text-[#4F4C53]/40">{blog.date}</p>
+                <p className="text-md text-transparent">{blog.date}</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 space-y-6 text-[18px] font-light leading-7 text-justify text-secondary relative z-20 lg:mr-96 mt-12">
                 {p1 && (

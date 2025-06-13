@@ -40,9 +40,9 @@ const Footer: React.FC = () => {
                         className="text-ternary teext-sm lg:text-base">Address</h2>
                         <p 
                         className="text-sm lg:text-base">
-                            Kandy-Trinco Road,<br/>
-                            Aluviharaya,<br/>
-                            Matale.
+                            Aluviharaya Temple,<br/>
+                            Thotagamuwa, Matale,<br/>
+                            Sri Lanka.
                         </p>
                     </section>
 

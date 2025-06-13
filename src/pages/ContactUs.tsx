@@ -137,7 +137,7 @@ const ContactPage: React.FC = () => {
                   <HiOutlineMail className="icon" />
                 </div>
                 <h3>EMAIL</h3>
-                <p>Aluviharacave.lk@gmail.com</p>
+                <p>info@aluviharaya.com</p>
               </div>
             </div>
           </div>
