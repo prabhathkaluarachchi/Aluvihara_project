@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import Flower from "../../assets/linearts/flowerLineArt.png";
 import { Pause, Play } from "lucide-react";
-import TripitakaVideo from '../../assets/videos/tripitaka_video.mp4'
+import TripitakaVideo from '../../assets/videos/tripitaka-video.mp4'
 
 const PalmLeafSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
