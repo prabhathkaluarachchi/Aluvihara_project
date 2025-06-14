@@ -8,6 +8,7 @@ import TestVideo from '../../assets/videos/test.mp4'
 import TempleMap from '../../assets/images/location-map.png'
 import { TbFileSearch } from "react-icons/tb";
 import '../../index.css'
+import HeroVideo1 from '../../assets/videos/aluvihara-video-1.mp4'
 
 
 type Slide = {
@@ -34,7 +35,7 @@ const HomeHero: React.FC = () => {
   const slides: Slide[] = [
     {
 
-      video: "https://videos.pexels.com/video-files/1210220/1210220-uhd_2560_1440_30fps.mp4",
+      video: HeroVideo1,
       title1: "Sacred Sanctuary",
       titleSub:  "Wisdom",
       title2: "Aluvihara Rock Temple",
@@ -46,7 +47,7 @@ const HomeHero: React.FC = () => {
       video: "https://videos.pexels.com/video-files/5416356/5416356-uhd_2732_1440_25fps.mp4",
       title1: "The Words",
       titleSub: "of Buddha",
-      title2: " Pali Canon - Tipitaka",
+      title2: " Pali Canon (Tipitaka)",
       description: 'Dating back to the 3rd century BCE, Aluvihara was more than a temple it was a sacred scriptorium. Protected by kings and monks alike, it served as the birthplace of Buddhist literary heritage.',
       link: "/palm",
     },
@@ -66,7 +67,7 @@ const HomeHero: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 8000);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -90,6 +91,17 @@ const HomeHero: React.FC = () => {
             className={`absolute w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${current === index ? "opacity-100 z-10" : "opacity-0 z-0"
               }`}
           />
+
+
+          // <iframe
+          //   key={index}
+          //   src={slide.video}
+          //   allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+          //   allowFullScreen
+          //   className={`absolute w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+          //     current === index ? "opacity-100 z-10" : "opacity-0 z-0"
+          //   }`}
+          // />
         ))}
 
         {/* desktop mapp */}

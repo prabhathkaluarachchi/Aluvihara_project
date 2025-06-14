@@ -1,4 +1,5 @@
 import { SlideData } from "./SliderTypes";
+import VisitorPrg from '../../../assets/images/visitor_workshop.jpeg'
 
 export const sliderData: SlideData[] = [
   {
@@ -11,7 +12,7 @@ export const sliderData: SlideData[] = [
     id: 2,
     title: 'Visitor Workshops',
     description: 'The Aluvihara Cultural Experience & Workshop offers international visitors a unique chance to explore Sri Lankan Buddhism, the Tripitaka, and ancient monastic traditions through guided tours and interactive sessions with monks, set in the historic Aluvihara Rock Temple.',
-    image: 'king.png'
+    image: VisitorPrg
   },
 
 ];
