@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import Flower from "../../assets/linearts/flowerLineArt.png";
 import { Pause, Play } from "lucide-react";
-import TripitakaVideo from '../../assets/videos/tripitaka-video.mp4'
+import TripitakaVideo from '../../assets/videos/tripitaka-video.mp4';
+import PalmProcess from '../../assets/images/Puskole.png'
 
 const PalmLeafSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -43,8 +44,10 @@ const PalmLeafSection: React.FC = () => {
           <div className="absolute bottom-[-120px] right-[95px] w-[782px] h-[600px] border-4 border-[#DADADA]/40 z-[-200] hidden lg:block" />
 
           <div className="flex flex-col lg:flex-row gap-8">
+            {/* **************edited lg:h-[400px]*********** */}
+
             <div
-              className="relative w-full lg:w-3/5 rounded-xl bg-amber-300 overflow-hidden shadow-lg z-50"
+              className="relative lg:h-[400px] w-full lg:w-3/5 rounded-xl bg-amber-300 overflow-hidden shadow-lg z-50"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -74,7 +77,7 @@ const PalmLeafSection: React.FC = () => {
               )} */}
 
               {/* Video */}
-              <video
+              {/* <video
                 ref={videoRef}
                 controls
                 onPlay={() => setIsPlaying(true)}
@@ -86,8 +89,11 @@ const PalmLeafSection: React.FC = () => {
                   type="video/mp4"
                 />
                 Your browser does not support the video tag
-              </video>
-            </div>
+              </video> */}
+
+              {/*********edited************* */}
+              <img src={PalmProcess} alt="" className="h-full w-full rounded-md z-0"/>
+              </div>
 
             {/* Description */}
             <div className="flex-1 flex items-center justify-center z-10">

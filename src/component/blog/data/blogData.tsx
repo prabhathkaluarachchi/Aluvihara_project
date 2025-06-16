@@ -116,7 +116,7 @@ export const blogPosts: BlogPostType[] = [
     id: "2",
     title:
       "The Sacred Legacy of Matale Aluvihare: A Gem Among Temples in Sri Lanka",
-    excerpt: "Explore the sacred legacy of Aluvihara...",
+    excerpt: "A Gem Among Temples in Sri Lanka...",
     content: [
       {
         _id: "p1",
@@ -183,7 +183,7 @@ export const blogPosts: BlogPostType[] = [
     id: "3",
     title:
       "Discover the Cave Wisdom of Aluvihare: Where History and Spirituality Unite",
-    excerpt: "Explore the sacred legacy of Aluvihara...",
+    excerpt: "Where History and Spirituality Unite...",
     content: [
       {
         _id: "p1",
@@ -237,7 +237,7 @@ export const blogPosts: BlogPostType[] = [
     id: "4",
     title:
       "Walking with the Ancients: Exploring the Timeless Spirit of Aluvihare Rock Temple",
-    excerpt: "Explore the sacred legacy of Aluvihara...",
+    excerpt: "Exploring the Timeless Spirit of Aluvihare Rock Temple...",
     content: [
       {
         _id: "p1",

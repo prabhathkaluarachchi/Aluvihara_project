@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 import { FiDownload } from "react-icons/fi";
@@ -12,8 +12,6 @@ interface MapProps {
 }
 
 const BlockMap: React.FC<MapProps> = ({onClose}) => {
-    const [scale, setScale] = useState<number>(1);
-
     const imageUrl = '/map-last-one.jpg'
 
     // map download
@@ -28,39 +26,76 @@ const BlockMap: React.FC<MapProps> = ({onClose}) => {
 
   //zoom in and out
     const zoomIn = () => {
-    setScale((prev) => Math.min(prev + 0.2, 3)); // max zoom 3x
+    setScale((prev) => Math.min(prev + 0.2, 3));
   };
 
   const zoomOut = () => {
-    setScale((prev) => Math.max(prev - 0.2, 0.5)); // min zoom 0.5x
+    setScale((prev) => Math.max(prev - 0.2, 0.5));
   };
 
-  //drag option
- const imgRef = useRef<HTMLImageElement | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [start, setStart] = useState({ x: 0, y: 0 });
+  //dragble map
+  const maxScale: number = 4;
+  const minScale: number = 1;
 
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [zoom] = useState(2);
+  const [scale, setScale] = useState(1);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [dragging, setDragging] = useState(false);
+  const lastPos = useRef({ x: 0, y: 0 });
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLImageElement>) => {
-    setIsDragging(true);
-    setStart({
-      x: e.clientX - position.x,
-      y: e.clientY - position.y,
-    });
-  };
+  const clamp = (v: number, min: number, max: number) =>
+    Math.min(Math.max(v, min), max);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging) return;
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
     e.preventDefault();
-    setPosition({
-      x: e.clientX - start.x,
-      y: e.clientY - start.y,
-    });
+    if (!containerRef.current) return;
+
+    const rect = containerRef.current.getBoundingClientRect();
+    const px = e.clientX - rect.left;
+    const py = e.clientY - rect.top;
+
+    const zoomIntensity = 0.0015;
+    const newScale = clamp(
+      scale - e.deltaY * zoomIntensity * scale,
+      minScale,
+      maxScale
+    );
+    const ratio = newScale / scale;
+
+    setOffset((prev) => ({
+      x: px - (px - prev.x) * ratio,
+      y: py - (py - prev.y) * ratio,
+    }));
+    setScale(newScale);
   };
 
-  const handleMouseUp = () => setIsDragging(false);
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    e.currentTarget.setPointerCapture(e.pointerId);
+    lastPos.current = { x: e.clientX, y: e.clientY };
+    setDragging(true);
+  };
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!dragging) return;
+    const dx = e.clientX - lastPos.current.x;
+    const dy = e.clientY - lastPos.current.y;
+    lastPos.current = { x: e.clientX, y: e.clientY };
+    setOffset((prev) => ({ x: prev.x + dx, y: prev.y + dy }));
+  };
+  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    e.currentTarget.releasePointerCapture(e.pointerId);
+    setDragging(false);
+  };
+
+  const resetView = () => {
+    setScale(1);
+    setOffset({ x: 0, y: 0 });
+  };
+
+    useEffect(() => {
+    const img = containerRef.current?.querySelector("img");
+    if (img) img.ondragstart = () => false;
+  }, []);
+  
 
 
   return (
@@ -101,21 +136,21 @@ const BlockMap: React.FC<MapProps> = ({onClose}) => {
                 </section>
                 
                 <div
-                className="h-11/12 rounded-bl-lg rounded-br-lg p-3 overflow-scroll"
-                    onMouseMove={handleMouseMove}
-                    onMouseUp={handleMouseUp}
-                    onMouseLeave={handleMouseUp}
-                    style={{ cursor: isDragging ? 'grabbing' : 'auto' }}>
+                className={`h-11/12 rounded-bl-lg rounded-br-lg p-3 overflow-auto`}
+                onWheel={handleWheel}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onDoubleClick={resetView}>
                     <img 
                     src={imageUrl}
-                    ref={imgRef}
                     alt="Aluvihara temple location map"
-                    onMouseDown={handleMouseDown}
-                    className={`h-full w-full rounded-bl-lg rounded-br-lg cursor-${isDragging ? 'grabbing' : 'grab'} transition-transform`}
-                    style={{
-                    cursor: isDragging ? 'grabbing' : 'grab',
-                    transform: `scale(${zoom}) translate(${position.x}px, ${position.y}px)`,
-                    }}/>
+                    draggable={false}
+                              style={{
+                    transform: `translate(${offset.x}px, ${offset.y}px) scale(${scale})`,
+                    transformOrigin: "0 0",
+                    transition: dragging ? "none" : "transform 80ms linear",
+                  }}/>
                 </div>
             </section>
         </section>

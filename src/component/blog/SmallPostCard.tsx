@@ -33,7 +33,7 @@ const SmallPostCard = ({ post }: Props) => {
             </Link>
 
             <span className="text-xs text-[#4B4B4B]">
-              Author: {post.author}
+              Date: {post.date}
             </span>
           </div>
         </div>

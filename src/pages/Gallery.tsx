@@ -32,7 +32,7 @@ export default function Gallery() {
       {/* copyrights */}
       <div
         className="bg-[#1E1E1E] text-center py-3 text-[8px] md:text-xs text-ternary">
-        <p>All rights reserved | Powered by All In One Holdings</p>
+        <p>All rights reserved | Powered by All In One IT Solutions</p>
       </div>
     </div>
   </>
