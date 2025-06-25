@@ -70,7 +70,7 @@ const App: React.FC = () => {
         <img
           src="/gallery/cavenew.png"
           alt="Temple line art"
-          className="absolute top-905 -right-0 hidden lg:block w-2xl object-fill pointer-events-none"
+          className="absolute top-905 -right-0 hidden lg:block w-lg object-fill pointer-events-none"
         />
 
         {/* <img 
@@ -79,7 +79,7 @@ const App: React.FC = () => {
         className='absolute -right-80 top-920 h-130 hidden lg:block' /> */}
 
         {/* events section */}
-        <section className="relative w-full mx-auto h-auto lg:h-[100dvh] mt-20 flex lg:mt-60 md:mt-35">
+        <section className="relative w-full mx-auto h-auto lg:h-[100dvh] mt-20 flex lg:mt-20 md:mt-35">
           <div className="absolute bg-gray-200 h-5/6 w-[95%] lg:w-4/5 md:top-23 lg:top-20 left-0 z-[-20] hidden md:block" />
 
           {/* slider */}
