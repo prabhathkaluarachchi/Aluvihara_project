@@ -63,7 +63,6 @@ const HomeHero: React.FC = () => {
 
   ];
 
-  // Auto play every 6 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);

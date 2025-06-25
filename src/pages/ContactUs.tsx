@@ -129,7 +129,7 @@ const ContactPage: React.FC = () => {
                   <FiPhone className="icon" />
                 </div>
                 <h3>CONTACT US</h3>
-                <p>Mobile: +94-66-222-5233</p>
+                <p>Mobile: +94 66 222 5233</p>
                 <hr />
               </div>
               <div style={{ marginTop: "10px" }}>
@@ -137,7 +137,7 @@ const ContactPage: React.FC = () => {
                   <HiOutlineMail className="icon" />
                 </div>
                 <h3>EMAIL</h3>
-                <p>info@aluviharaya.com</p>
+                <p>info@aluviharaya.lk</p>
               </div>
             </div>
           </div>
@@ -157,7 +157,7 @@ const ContactPage: React.FC = () => {
         </footer>
         {/* copyrights */}
         <div className="bg-[#1E1E1E] text-center py-3 text-[8px] md:text-xs text-ternary">
-          <p>All rights reserved | Powered by All In One Holdings</p>
+          <p>All rights reserved | Powered by All In One IT Solutions</p>
         </div>
       </div>
     </>
