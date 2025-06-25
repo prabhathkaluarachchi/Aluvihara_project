@@ -26,7 +26,7 @@ const MostPopular = () => {
                 <p className="text-sm font-medium text-gray-800 leading-6">
                   {post.title}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">{post.author}</p>
+                <p className="text-xs text-gray-500 mt-1">{post.date}</p>
               </div>
             </div>
           </Link>

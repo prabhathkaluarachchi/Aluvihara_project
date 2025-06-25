@@ -192,7 +192,7 @@ export const blogPosts: BlogPostType[] = [
       },
       {
         _id: "p2h",
-        content: "Aluvihare Cave Temples: A Sanctuary of Silence and Knowledge",
+        content: "A Sanctuary of Silence and Knowledge",
       },
       {
         _id: "p2",
