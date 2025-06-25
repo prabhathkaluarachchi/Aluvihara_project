@@ -118,9 +118,9 @@ const ContactPage: React.FC = () => {
                 </div>
                 <h3>LOCATION</h3>
                 <p>
-                  Aluvihara Rock Cave Temple,
+                  Aluvihara Historic Temple,
                   <br />
-                  Thotagamuwa, Matale, Sri Lanka
+                  Aluvihare, Matale
                 </p>
                 <hr />
               </div>
@@ -130,6 +130,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <h3>CONTACT US</h3>
                 <p>Mobile: +94 66 222 5233</p>
+                <p>Mobile: +94 77 489 6697</p>
                 <hr />
               </div>
               <div style={{ marginTop: "10px" }}>
