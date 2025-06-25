@@ -93,11 +93,11 @@ const steps = [
     description: `The leaves are then exposed to mild sunlight for several days to ensure they are thoroughly dried. This step is crucial for ensuring that the leaves are not too brittle for writing`,
     image: Step12,
   },
-  {
-    title: "Leaves are put outside on grass",
-    description: `Next, the sun-dried leaves are placed on grass to catch morning dew. The dew helps in the conditioning of the leaves, making them more supple and easier to handle for writing.`,
-    image: Step13,
-  },
+  // {
+  //   title: "Leaves are put outside on grass",
+  //   description: `Next, the sun-dried leaves are placed on grass to catch morning dew. The dew helps in the conditioning of the leaves, making them more supple and easier to handle for writing.`,
+  //   image: Step13,
+  // },
   {
     title: "Leaf strips are wound in concentric way",
     description: `The dried leaf strips are wound in a concentric manner to ensure they are kept in proper storage conditions. This winding helps protect the leaves from damage during storage.`,
@@ -193,7 +193,7 @@ const Process = () => {
   let lineHeight = "240px";
 
   if (visibleCount > 20) {
-    lineHeight = "4450px";
+    lineHeight = "4300px";
   } else if (visibleCount === 20) {
     lineHeight = "3270px";
   } else if (visibleCount === 12) {
@@ -213,7 +213,9 @@ const Process = () => {
             <span className="text-primary block text-3xl font-medium">
               Steps of
             </span>
-            <span className="text-[72px] lg:text-[96px] text-[#181415]">Process</span>
+            <span className="text-[72px] lg:text-[96px] text-[#181415]">
+              Process
+            </span>
           </h2>
         </div>
         <div className="relative justify-center z-10 max-w-6xl px-4 flex flex-col lg:ml-56">
