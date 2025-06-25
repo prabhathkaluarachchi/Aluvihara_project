@@ -47,11 +47,11 @@ const PalmLeafSection: React.FC = () => {
             {/* **************edited lg:h-[400px]*********** */}
 
             <div
-              className="relative lg:h-[400px] w-full lg:w-3/5 rounded-xl bg-amber-300 overflow-hidden shadow-lg z-50"
+              className="relative lg:h-[400px] w-full lg:w-3/5 rounded-xl  overflow-hidden shadow-lg z-50"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              {/* Play & Pause Buttons */}
+              {/* ************************** edited Play & Pause Buttons
               {!isPlaying && (
                 <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center z-10 text-white space-y-4">
                   <button
@@ -62,7 +62,7 @@ const PalmLeafSection: React.FC = () => {
                   </button>
                   <p className="text-lg text-gray-200">Play Here</p>
                 </div>
-              )}
+              )} */}
 
               {/* {isPlaying && isHovered && (
                 <div className="absolute bg-black/40 flex flex-col items-center justify-center z-10 space-y-4">
@@ -92,7 +92,7 @@ const PalmLeafSection: React.FC = () => {
               </video> */}
 
               {/*********edited************* */}
-              <img src={PalmProcess} alt="" className="h-full w-full rounded-md z-0"/>
+              <img src={PalmProcess} alt="" className="h-full w-full rounded-md z-0 object-cover"/>
               </div>
 
             {/* Description */}

@@ -41,8 +41,8 @@ const BlogPost = ({ post }: BlogPostProps) => {
         </p>
 
         <div className="flex justify-between items-center">
-          <span className="text-sm text-ternary font-roboto">
-            Author: {post.author}
+          <span className="text-sm text-transparent font-roboto">
+            Author: {post.date}
           </span>
           <Link
             to={`/viewblog/${post.id}`}
